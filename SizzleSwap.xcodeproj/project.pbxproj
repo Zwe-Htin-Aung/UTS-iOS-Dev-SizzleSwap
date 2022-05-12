@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723B282D2D7A004A8D2F /* AppDelegate.swift */; };
+		8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723D282D2D7A004A8D2F /* SceneDelegate.swift */; };
+		87167240282D2D7A004A8D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723F282D2D7A004A8D2F /* ViewController.swift */; };
+		87167243282D2D7A004A8D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87167241282D2D7A004A8D2F /* Main.storyboard */; };
+		87167245282D2D7B004A8D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87167244282D2D7B004A8D2F /* Assets.xcassets */; };
+		87167253282D2D7B004A8D2F /* SizzleSwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87167252282D2D7B004A8D2F /* SizzleSwapTests.swift */; };
+		8716725D282D2D7B004A8D2F /* SizzleSwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */; };
+		8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8716724F282D2D7B004A8D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87167230282D2D7A004A8D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87167237282D2D7A004A8D2F;
+			remoteInfo = SizzleSwap;
+		};
+		87167259282D2D7B004A8D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87167230282D2D7A004A8D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87167237282D2D7A004A8D2F;
+			remoteInfo = SizzleSwap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87167238282D2D7A004A8D2F /* SizzleSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizzleSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8716723B282D2D7A004A8D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8716723D282D2D7A004A8D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8716723F282D2D7A004A8D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87167242282D2D7A004A8D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87167244282D2D7B004A8D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87167249282D2D7B004A8D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8716724E282D2D7B004A8D2F /* SizzleSwapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizzleSwapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87167252282D2D7B004A8D2F /* SizzleSwapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapTests.swift; sourceTree = "<group>"; };
+		87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizzleSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITests.swift; sourceTree = "<group>"; };
+		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87167235282D2D7A004A8D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8716724B282D2D7B004A8D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87167255282D2D7B004A8D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8716722F282D2D7A004A8D2F = {
+			isa = PBXGroup;
+			children = (
+				8716723A282D2D7A004A8D2F /* SizzleSwap */,
+				87167251282D2D7B004A8D2F /* SizzleSwapTests */,
+				8716725B282D2D7B004A8D2F /* SizzleSwapUITests */,
+				87167239282D2D7A004A8D2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87167239282D2D7A004A8D2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87167238282D2D7A004A8D2F /* SizzleSwap.app */,
+				8716724E282D2D7B004A8D2F /* SizzleSwapTests.xctest */,
+				87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8716723A282D2D7A004A8D2F /* SizzleSwap */ = {
+			isa = PBXGroup;
+			children = (
+				8716726D282D2DC0004A8D2F /* CurrencySwap */,
+				8716726E282D2DC9004A8D2F /* CryptoSwap */,
+				8716726F282D2E00004A8D2F /* Feature-3 */,
+				8716726B282D2D8B004A8D2F /* View */,
+				8716723B282D2D7A004A8D2F /* AppDelegate.swift */,
+				8716723D282D2D7A004A8D2F /* SceneDelegate.swift */,
+				8716723F282D2D7A004A8D2F /* ViewController.swift */,
+				87167244282D2D7B004A8D2F /* Assets.xcassets */,
+				87167249282D2D7B004A8D2F /* Info.plist */,
+			);
+			path = SizzleSwap;
+			sourceTree = "<group>";
+		};
+		87167251282D2D7B004A8D2F /* SizzleSwapTests */ = {
+			isa = PBXGroup;
+			children = (
+				87167252282D2D7B004A8D2F /* SizzleSwapTests.swift */,
+			);
+			path = SizzleSwapTests;
+			sourceTree = "<group>";
+		};
+		8716725B282D2D7B004A8D2F /* SizzleSwapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */,
+				8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */,
+			);
+			path = SizzleSwapUITests;
+			sourceTree = "<group>";
+		};
+		8716726B282D2D8B004A8D2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87167241282D2D7A004A8D2F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8716726D282D2DC0004A8D2F /* CurrencySwap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CurrencySwap;
+			sourceTree = "<group>";
+		};
+		8716726E282D2DC9004A8D2F /* CryptoSwap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CryptoSwap;
+			sourceTree = "<group>";
+		};
+		8716726F282D2E00004A8D2F /* Feature-3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Feature-3";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87167237282D2D7A004A8D2F /* SizzleSwap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87167262282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwap" */;
+			buildPhases = (
+				87167234282D2D7A004A8D2F /* Sources */,
+				87167235282D2D7A004A8D2F /* Frameworks */,
+				87167236282D2D7A004A8D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SizzleSwap;
+			productName = SizzleSwap;
+			productReference = 87167238282D2D7A004A8D2F /* SizzleSwap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8716724D282D2D7B004A8D2F /* SizzleSwapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87167265282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwapTests" */;
+			buildPhases = (
+				8716724A282D2D7B004A8D2F /* Sources */,
+				8716724B282D2D7B004A8D2F /* Frameworks */,
+				8716724C282D2D7B004A8D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87167250282D2D7B004A8D2F /* PBXTargetDependency */,
+			);
+			name = SizzleSwapTests;
+			productName = SizzleSwapTests;
+			productReference = 8716724E282D2D7B004A8D2F /* SizzleSwapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87167257282D2D7B004A8D2F /* SizzleSwapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87167268282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwapUITests" */;
+			buildPhases = (
+				87167254282D2D7B004A8D2F /* Sources */,
+				87167255282D2D7B004A8D2F /* Frameworks */,
+				87167256282D2D7B004A8D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8716725A282D2D7B004A8D2F /* PBXTargetDependency */,
+			);
+			name = SizzleSwapUITests;
+			productName = SizzleSwapUITests;
+			productReference = 87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87167230282D2D7A004A8D2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					87167237282D2D7A004A8D2F = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					8716724D282D2D7B004A8D2F = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 87167237282D2D7A004A8D2F;
+					};
+					87167257282D2D7B004A8D2F = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 87167237282D2D7A004A8D2F;
+					};
+				};
+			};
+			buildConfigurationList = 87167233282D2D7A004A8D2F /* Build configuration list for PBXProject "SizzleSwap" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8716722F282D2D7A004A8D2F;
+			productRefGroup = 87167239282D2D7A004A8D2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87167237282D2D7A004A8D2F /* SizzleSwap */,
+				8716724D282D2D7B004A8D2F /* SizzleSwapTests */,
+				87167257282D2D7B004A8D2F /* SizzleSwapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87167236282D2D7A004A8D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87167245282D2D7B004A8D2F /* Assets.xcassets in Resources */,
+				87167243282D2D7A004A8D2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8716724C282D2D7B004A8D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87167256282D2D7B004A8D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87167234282D2D7A004A8D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87167240282D2D7A004A8D2F /* ViewController.swift in Sources */,
+				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
+				8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8716724A282D2D7B004A8D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87167253282D2D7B004A8D2F /* SizzleSwapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87167254282D2D7B004A8D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */,
+				8716725D282D2D7B004A8D2F /* SizzleSwapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87167250282D2D7B004A8D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87167237282D2D7A004A8D2F /* SizzleSwap */;
+			targetProxy = 8716724F282D2D7B004A8D2F /* PBXContainerItemProxy */;
+		};
+		8716725A282D2D7B004A8D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87167237282D2D7A004A8D2F /* SizzleSwap */;
+			targetProxy = 87167259282D2D7B004A8D2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87167241282D2D7A004A8D2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87167242282D2D7A004A8D2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87167260282D2D7B004A8D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87167261282D2D7B004A8D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87167263282D2D7B004A8D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SizzleSwap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87167264282D2D7B004A8D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SizzleSwap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87167266282D2D7B004A8D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SizzleSwap.app/SizzleSwap";
+			};
+			name = Debug;
+		};
+		87167267282D2D7B004A8D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SizzleSwap.app/SizzleSwap";
+			};
+			name = Release;
+		};
+		87167269282D2D7B004A8D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SizzleSwap;
+			};
+			name = Debug;
+		};
+		8716726A282D2D7B004A8D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = UTS.SizzleSwapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SizzleSwap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87167233282D2D7A004A8D2F /* Build configuration list for PBXProject "SizzleSwap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87167260282D2D7B004A8D2F /* Debug */,
+				87167261282D2D7B004A8D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87167262282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87167263282D2D7B004A8D2F /* Debug */,
+				87167264282D2D7B004A8D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87167265282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87167266282D2D7B004A8D2F /* Debug */,
+				87167267282D2D7B004A8D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87167268282D2D7B004A8D2F /* Build configuration list for PBXNativeTarget "SizzleSwapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87167269282D2D7B004A8D2F /* Debug */,
+				8716726A282D2D7B004A8D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87167230282D2D7A004A8D2F /* Project object */;
+}
