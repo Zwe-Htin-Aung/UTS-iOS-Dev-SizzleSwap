@@ -18,6 +18,8 @@
 		87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440AE282E133B00891F3D /* CurrencyViewController.swift */; };
 		87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B0282E13F700891F3D /* CryptoViewController.swift */; };
 		87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */; };
+		87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */; };
+		87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B6282E75E600891F3D /* CurrencyCodes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
 		87F440B0282E13F700891F3D /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoViewController.swift; path = SizzleSwap/CryptoViewController.swift; sourceTree = SOURCE_ROOT; };
 		87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedSwapsViewController.swift; path = SizzleSwap/SavedSwapsViewController.swift; sourceTree = SOURCE_ROOT; };
+		87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodeRequest.swift; path = SizzleSwap/CurrencySwap/CurrencyCodeRequest.swift; sourceTree = SOURCE_ROOT; };
+		87F440B6282E75E600891F3D /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodes.swift; path = SizzleSwap/CurrencySwap/CurrencyCodes.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				87F440AE282E133B00891F3D /* CurrencyViewController.swift */,
+				87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */,
+				87F440B6282E75E600891F3D /* CurrencyCodes.swift */,
 			);
 			path = CurrencySwap;
 			sourceTree = "<group>";
@@ -297,8 +303,10 @@
 			files = (
 				87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */,
 				87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */,
+				87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */,
 				87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */,
 				87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */,
+				87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */,
 				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
 				8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */,
 			);
