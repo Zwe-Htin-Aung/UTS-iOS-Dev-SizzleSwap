@@ -108,15 +108,79 @@
         <!--Currency Swap-->
         <scene sceneID="YZ0-Ps-Vpa">
             <objects>
-                <viewController storyboardIdentifier="CurrencyViewController" id="U9O-gV-1DQ" customClass="CurrencyViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrencyViewController" id="U9O-gV-1DQ" customClass="CurrencyViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A3A-uA-tg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-Si-z6x" userLabel="UI Container">
                                 <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-lt-GrS">
+                                        <rect key="frame" x="90.5" y="150" width="119.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-Me-X1T">
+                                        <rect key="frame" x="25" y="194" width="250" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-EX-OYt">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KS3-Qy-OjI"/>
+                                            <constraint firstAttribute="width" constant="250" id="dLf-qS-dyC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-bP-8Og">
+                                        <rect key="frame" x="141.5" y="284" width="17.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aC7-9b-hKC">
+                                        <rect key="frame" x="25" y="328" width="250" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eME-gl-aui">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="BKW-lE-zJg"/>
+                                            <constraint firstAttribute="height" constant="40" id="UaI-g8-2l5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-Hn-KUH">
+                                        <rect key="frame" x="100" y="418" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="SuK-49-L8y"/>
+                                            <constraint firstAttribute="height" constant="40" id="Y6k-I6-IyG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="iRW-xg-64H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="A6k-bP-8Og" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="6dJ-QG-OFM"/>
+                                    <constraint firstItem="ZYn-Me-X1T" firstAttribute="top" secondItem="Qrz-lt-GrS" secondAttribute="bottom" constant="20" id="7rT-ng-HdL"/>
+                                    <constraint firstItem="aC7-9b-hKC" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="8Ed-D0-f6M"/>
+                                    <constraint firstItem="Qrz-lt-GrS" firstAttribute="top" secondItem="PgU-Si-z6x" secondAttribute="top" constant="150" id="EsS-fU-ogb"/>
+                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="F7p-0a-GbO"/>
                                     <constraint firstAttribute="width" constant="300" id="Jvz-Po-AFa"/>
+                                    <constraint firstItem="A6k-bP-8Og" firstAttribute="top" secondItem="ZYn-Me-X1T" secondAttribute="bottom" constant="50" id="M6f-rd-NzV"/>
+                                    <constraint firstItem="aC7-9b-hKC" firstAttribute="top" secondItem="A6k-bP-8Og" secondAttribute="bottom" constant="20" id="YhW-L5-VWw"/>
+                                    <constraint firstItem="Qrz-lt-GrS" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="aUW-60-wg8"/>
+                                    <constraint firstItem="ZYn-Me-X1T" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="cZB-Ca-Tht"/>
+                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="top" secondItem="aC7-9b-hKC" secondAttribute="bottom" constant="50" id="d0O-zq-gyA"/>
                                     <constraint firstAttribute="height" constant="600" id="zsH-cQ-JRG"/>
                                 </constraints>
                             </view>
