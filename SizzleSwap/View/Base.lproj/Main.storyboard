@@ -48,7 +48,7 @@
                                             <constraint firstAttribute="height" constant="40" id="BLN-en-Vow"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Convert Currency"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Currency"/>
                                         <connections>
                                             <segue destination="U9O-gV-1DQ" kind="show" id="b5y-3a-YH9"/>
                                         </connections>
@@ -60,7 +60,7 @@
                                             <constraint firstAttribute="width" constant="200" id="E0m-JG-l1a"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Convert Cryptocurrency"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Cryptocurrency"/>
                                         <connections>
                                             <segue destination="0eD-QZ-SFS" kind="show" id="4yb-uQ-aN2"/>
                                         </connections>
@@ -72,7 +72,10 @@
                                             <constraint firstAttribute="height" constant="40" id="dhb-Xr-FVO"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Saved Conversions"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Saved Swaps"/>
+                                        <connections>
+                                            <segue destination="ZhN-En-rxs" kind="show" id="gEV-7h-UZz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -160,7 +163,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-NV-nrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="98"/>
+            <point key="canvasLocation" x="890" y="98"/>
+        </scene>
+        <!--Saved Swaps-->
+        <scene sceneID="Wop-cT-Lrh">
+            <objects>
+                <viewController id="ZhN-En-rxs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lk4-id-9Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-V8-t9U" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="01C-n5-22p"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="600" id="Fdn-qG-uSy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="IsK-Hw-nx3"/>
+                                    <constraint firstAttribute="width" constant="300" id="Twl-Yc-iMZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kTc-3U-KoG"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="nPD-FW-88i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PPu-jp-JIV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PPY-V8-t9U" firstAttribute="centerX" secondItem="Lk4-id-9Zg" secondAttribute="centerX" id="ZTi-fp-yt7"/>
+                            <constraint firstItem="PPY-V8-t9U" firstAttribute="centerY" secondItem="Lk4-id-9Zg" secondAttribute="centerY" id="o1z-y9-H3c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Saved Swaps" id="GBz-29-rQf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2PT-8Q-Sdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="860"/>
         </scene>
     </scenes>
     <resources>

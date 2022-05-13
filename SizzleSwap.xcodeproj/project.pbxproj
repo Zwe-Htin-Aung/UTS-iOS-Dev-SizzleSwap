@@ -17,6 +17,7 @@
 		8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */; };
 		87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440AE282E133B00891F3D /* CurrencyViewController.swift */; };
 		87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B0282E13F700891F3D /* CryptoViewController.swift */; };
+		87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
 		87F440B0282E13F700891F3D /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoViewController.swift; path = SizzleSwap/CryptoViewController.swift; sourceTree = SOURCE_ROOT; };
+		87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedSwapsViewController.swift; path = SizzleSwap/SavedSwapsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			children = (
 				8716726D282D2DC0004A8D2F /* CurrencySwap */,
 				8716726E282D2DC9004A8D2F /* CryptoSwap */,
-				8716726F282D2E00004A8D2F /* Feature-3 */,
+				8716726F282D2E00004A8D2F /* SavedSwaps */,
 				8716726B282D2D8B004A8D2F /* View */,
 				8716723B282D2D7A004A8D2F /* AppDelegate.swift */,
 				8716723D282D2D7A004A8D2F /* SceneDelegate.swift */,
@@ -155,11 +157,12 @@
 			path = CryptoSwap;
 			sourceTree = "<group>";
 		};
-		8716726F282D2E00004A8D2F /* Feature-3 */ = {
+		8716726F282D2E00004A8D2F /* SavedSwaps */ = {
 			isa = PBXGroup;
 			children = (
+				87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */,
 			);
-			path = "Feature-3";
+			path = SavedSwaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */,
+				87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */,
 				87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */,
 				87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */,
 				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
