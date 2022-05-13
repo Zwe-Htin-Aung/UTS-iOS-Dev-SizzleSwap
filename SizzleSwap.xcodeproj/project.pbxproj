@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723B282D2D7A004A8D2F /* AppDelegate.swift */; };
 		8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723D282D2D7A004A8D2F /* SceneDelegate.swift */; };
-		87167240282D2D7A004A8D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723F282D2D7A004A8D2F /* ViewController.swift */; };
+		87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716723F282D2D7A004A8D2F /* HomeViewController.swift */; };
 		87167243282D2D7A004A8D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87167241282D2D7A004A8D2F /* Main.storyboard */; };
 		87167245282D2D7B004A8D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87167244282D2D7B004A8D2F /* Assets.xcassets */; };
 		87167253282D2D7B004A8D2F /* SizzleSwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87167252282D2D7B004A8D2F /* SizzleSwapTests.swift */; };
 		8716725D282D2D7B004A8D2F /* SizzleSwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */; };
 		8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */; };
+		87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440AE282E133B00891F3D /* CurrencyViewController.swift */; };
+		87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B0282E13F700891F3D /* CryptoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		87167238282D2D7A004A8D2F /* SizzleSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SizzleSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8716723B282D2D7A004A8D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8716723D282D2D7A004A8D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8716723F282D2D7A004A8D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8716723F282D2D7A004A8D2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87167242282D2D7A004A8D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87167244282D2D7B004A8D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87167249282D2D7B004A8D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizzleSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITests.swift; sourceTree = "<group>"; };
 		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
+		87F440B0282E13F700891F3D /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoViewController.swift; path = SizzleSwap/CryptoViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,7 @@
 				8716726B282D2D8B004A8D2F /* View */,
 				8716723B282D2D7A004A8D2F /* AppDelegate.swift */,
 				8716723D282D2D7A004A8D2F /* SceneDelegate.swift */,
-				8716723F282D2D7A004A8D2F /* ViewController.swift */,
+				8716723F282D2D7A004A8D2F /* HomeViewController.swift */,
 				87167244282D2D7B004A8D2F /* Assets.xcassets */,
 				87167249282D2D7B004A8D2F /* Info.plist */,
 			);
@@ -138,6 +142,7 @@
 		8716726D282D2DC0004A8D2F /* CurrencySwap */ = {
 			isa = PBXGroup;
 			children = (
+				87F440AE282E133B00891F3D /* CurrencyViewController.swift */,
 			);
 			path = CurrencySwap;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		8716726E282D2DC9004A8D2F /* CryptoSwap */ = {
 			isa = PBXGroup;
 			children = (
+				87F440B0282E13F700891F3D /* CryptoViewController.swift */,
 			);
 			path = CryptoSwap;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87167240282D2D7A004A8D2F /* ViewController.swift in Sources */,
+				87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */,
+				87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */,
+				87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */,
 				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
 				8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */,
 			);

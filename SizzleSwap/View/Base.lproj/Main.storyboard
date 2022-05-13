@@ -1,24 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Glp-Vq-ef4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Usx-lG-6pg">
+            <objects>
+                <navigationController id="Glp-Vq-ef4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hg-MX-9bR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KNY-x3-Srg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXv-rb-i5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819" y="98"/>
+        </scene>
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghG-av-zRK" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SizzleSwap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-1r-ECC">
+                                        <rect key="frame" x="81" y="20" width="138.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-wx-2Xw">
+                                        <rect key="frame" x="50" y="253.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="6mV-30-8ZZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="BLN-en-Vow"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Convert Currency"/>
+                                        <connections>
+                                            <segue destination="U9O-gV-1DQ" kind="show" id="b5y-3a-YH9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG7-0Q-w2M">
+                                        <rect key="frame" x="50" y="323.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BhJ-8L-5sA"/>
+                                            <constraint firstAttribute="width" constant="200" id="E0m-JG-l1a"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Convert Cryptocurrency"/>
+                                        <connections>
+                                            <segue destination="0eD-QZ-SFS" kind="show" id="4yb-uQ-aN2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-lj-ErI">
+                                        <rect key="frame" x="50" y="393.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0f0-wT-3o2"/>
+                                            <constraint firstAttribute="height" constant="40" id="dhb-Xr-FVO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Saved Conversions"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RG7-0Q-w2M" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="6Pe-1Y-UHf"/>
+                                    <constraint firstAttribute="width" constant="300" id="HGN-j2-W3e"/>
+                                    <constraint firstItem="OhE-lj-ErI" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="KTJ-C0-H8x"/>
+                                    <constraint firstItem="RG7-0Q-w2M" firstAttribute="top" secondItem="ioR-wx-2Xw" secondAttribute="bottom" constant="30" id="KZ4-mP-cUb"/>
+                                    <constraint firstItem="ioR-wx-2Xw" firstAttribute="top" secondItem="LtE-1r-ECC" secondAttribute="bottom" constant="200" id="Rxn-Jj-HpR"/>
+                                    <constraint firstItem="OhE-lj-ErI" firstAttribute="top" secondItem="RG7-0Q-w2M" secondAttribute="bottom" constant="30" id="T96-iR-L7c"/>
+                                    <constraint firstItem="LtE-1r-ECC" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="b4e-VH-hyG"/>
+                                    <constraint firstAttribute="height" constant="600" id="dXh-Zb-nGE"/>
+                                    <constraint firstItem="ioR-wx-2Xw" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="iAx-TG-p69"/>
+                                    <constraint firstItem="LtE-1r-ECC" firstAttribute="top" secondItem="ghG-av-zRK" secondAttribute="top" constant="20" id="lud-dU-JXB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghG-av-zRK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HPv-gc-Fz5"/>
+                            <constraint firstItem="ghG-av-zRK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S7F-DI-Y9P"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MoC-Cu-jEp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+        <!--Currency Swap-->
+        <scene sceneID="YZ0-Ps-Vpa">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyViewController" id="U9O-gV-1DQ" customClass="CurrencyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A3A-uA-tg2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-Si-z6x" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Jvz-Po-AFa"/>
+                                    <constraint firstAttribute="height" constant="600" id="zsH-cQ-JRG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lkt-hd-qec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PgU-Si-z6x" firstAttribute="centerX" secondItem="A3A-uA-tg2" secondAttribute="centerX" id="6vW-dr-2Bc"/>
+                            <constraint firstItem="PgU-Si-z6x" firstAttribute="centerY" secondItem="A3A-uA-tg2" secondAttribute="centerY" id="joy-9o-5uo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Swap" id="pMO-FY-sQI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swo-TS-wPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-618"/>
+        </scene>
+        <!--Crypto Swap-->
+        <scene sceneID="xJq-25-VUG">
+            <objects>
+                <viewController storyboardIdentifier="CryptoViewController" id="0eD-QZ-SFS" customClass="CryptoViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5P-eM-ctT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-xy-Eg4" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7RH-ex-93U"/>
+                                    <constraint firstAttribute="height" constant="600" id="qc1-zu-nJo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="sBm-pb-kcO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="zPU-ld-Edc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pni-YN-zH8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerX" secondItem="i5P-eM-ctT" secondAttribute="centerX" id="ANU-8s-Zz1"/>
+                            <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerY" secondItem="i5P-eM-ctT" secondAttribute="centerY" id="Kdw-Tw-5B2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crypto Swap" id="9tX-k6-HCy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-NV-nrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
