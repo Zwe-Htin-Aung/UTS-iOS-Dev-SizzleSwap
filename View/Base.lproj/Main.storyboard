@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Glp-Vq-ef4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Usx-lG-6pg">
+            <objects>
+                <navigationController id="Glp-Vq-ef4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hg-MX-9bR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KNY-x3-Srg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXv-rb-i5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-819" y="98"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghG-av-zRK" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SizzleSwap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-1r-ECC">
+                                        <rect key="frame" x="81" y="20" width="138.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-wx-2Xw">
+                                        <rect key="frame" x="50" y="253.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="6mV-30-8ZZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="BLN-en-Vow"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Currency"/>
+                                        <connections>
+                                            <segue destination="U9O-gV-1DQ" kind="show" id="b5y-3a-YH9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG7-0Q-w2M">
+                                        <rect key="frame" x="50" y="323.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BhJ-8L-5sA"/>
+                                            <constraint firstAttribute="width" constant="200" id="E0m-JG-l1a"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Cryptocurrency"/>
+                                        <connections>
+                                            <segue destination="0eD-QZ-SFS" kind="show" id="4yb-uQ-aN2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-lj-ErI">
+                                        <rect key="frame" x="50" y="393.5" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0f0-wT-3o2"/>
+                                            <constraint firstAttribute="height" constant="40" id="dhb-Xr-FVO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Saved Swaps"/>
+                                        <connections>
+                                            <segue destination="ZhN-En-rxs" kind="show" id="gEV-7h-UZz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RG7-0Q-w2M" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="6Pe-1Y-UHf"/>
+                                    <constraint firstAttribute="width" constant="300" id="HGN-j2-W3e"/>
+                                    <constraint firstItem="OhE-lj-ErI" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="KTJ-C0-H8x"/>
+                                    <constraint firstItem="RG7-0Q-w2M" firstAttribute="top" secondItem="ioR-wx-2Xw" secondAttribute="bottom" constant="30" id="KZ4-mP-cUb"/>
+                                    <constraint firstItem="ioR-wx-2Xw" firstAttribute="top" secondItem="LtE-1r-ECC" secondAttribute="bottom" constant="200" id="Rxn-Jj-HpR"/>
+                                    <constraint firstItem="OhE-lj-ErI" firstAttribute="top" secondItem="RG7-0Q-w2M" secondAttribute="bottom" constant="30" id="T96-iR-L7c"/>
+                                    <constraint firstItem="LtE-1r-ECC" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="b4e-VH-hyG"/>
+                                    <constraint firstAttribute="height" constant="600" id="dXh-Zb-nGE"/>
+                                    <constraint firstItem="ioR-wx-2Xw" firstAttribute="centerX" secondItem="ghG-av-zRK" secondAttribute="centerX" id="iAx-TG-p69"/>
+                                    <constraint firstItem="LtE-1r-ECC" firstAttribute="top" secondItem="ghG-av-zRK" secondAttribute="top" constant="20" id="lud-dU-JXB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghG-av-zRK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HPv-gc-Fz5"/>
+                            <constraint firstItem="ghG-av-zRK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S7F-DI-Y9P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MoC-Cu-jEp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+        <!--Currency Swap-->
+        <scene sceneID="YZ0-Ps-Vpa">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyViewController" id="U9O-gV-1DQ" customClass="CurrencyViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A3A-uA-tg2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-Si-z6x" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-lt-GrS">
+                                        <rect key="frame" x="90.5" y="150" width="119.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-Me-X1T">
+                                        <rect key="frame" x="25" y="194" width="250" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-EX-OYt">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KS3-Qy-OjI"/>
+                                            <constraint firstAttribute="width" constant="250" id="dLf-qS-dyC"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-bP-8Og">
+                                        <rect key="frame" x="141.5" y="284" width="17.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aC7-9b-hKC">
+                                        <rect key="frame" x="25" y="328" width="250" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eME-gl-aui">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="BKW-lE-zJg"/>
+                                            <constraint firstAttribute="height" constant="40" id="UaI-g8-2l5"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-Hn-KUH">
+                                        <rect key="frame" x="100" y="418" width="100" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="SuK-49-L8y"/>
+                                            <constraint firstAttribute="height" constant="40" id="Y6k-I6-IyG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="iRW-xg-64H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="A6k-bP-8Og" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="6dJ-QG-OFM"/>
+                                    <constraint firstItem="ZYn-Me-X1T" firstAttribute="top" secondItem="Qrz-lt-GrS" secondAttribute="bottom" constant="20" id="7rT-ng-HdL"/>
+                                    <constraint firstItem="aC7-9b-hKC" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="8Ed-D0-f6M"/>
+                                    <constraint firstItem="Qrz-lt-GrS" firstAttribute="top" secondItem="PgU-Si-z6x" secondAttribute="top" constant="150" id="EsS-fU-ogb"/>
+                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="F7p-0a-GbO"/>
+                                    <constraint firstAttribute="width" constant="300" id="Jvz-Po-AFa"/>
+                                    <constraint firstItem="A6k-bP-8Og" firstAttribute="top" secondItem="ZYn-Me-X1T" secondAttribute="bottom" constant="50" id="M6f-rd-NzV"/>
+                                    <constraint firstItem="aC7-9b-hKC" firstAttribute="top" secondItem="A6k-bP-8Og" secondAttribute="bottom" constant="20" id="YhW-L5-VWw"/>
+                                    <constraint firstItem="Qrz-lt-GrS" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="aUW-60-wg8"/>
+                                    <constraint firstItem="ZYn-Me-X1T" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="cZB-Ca-Tht"/>
+                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="top" secondItem="aC7-9b-hKC" secondAttribute="bottom" constant="50" id="d0O-zq-gyA"/>
+                                    <constraint firstAttribute="height" constant="600" id="zsH-cQ-JRG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lkt-hd-qec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PgU-Si-z6x" firstAttribute="centerX" secondItem="A3A-uA-tg2" secondAttribute="centerX" id="6vW-dr-2Bc"/>
+                            <constraint firstItem="PgU-Si-z6x" firstAttribute="centerY" secondItem="A3A-uA-tg2" secondAttribute="centerY" id="joy-9o-5uo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Swap" id="pMO-FY-sQI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swo-TS-wPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-618"/>
+        </scene>
+        <!--Crypto Swap-->
+        <scene sceneID="xJq-25-VUG">
+            <objects>
+                <viewController storyboardIdentifier="CryptoViewController" id="0eD-QZ-SFS" customClass="CryptoViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5P-eM-ctT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfT-xy-Eg4" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7RH-ex-93U"/>
+                                    <constraint firstAttribute="height" constant="600" id="qc1-zu-nJo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="sBm-pb-kcO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="zPU-ld-Edc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pni-YN-zH8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerX" secondItem="i5P-eM-ctT" secondAttribute="centerX" id="ANU-8s-Zz1"/>
+                            <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerY" secondItem="i5P-eM-ctT" secondAttribute="centerY" id="Kdw-Tw-5B2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crypto Swap" id="9tX-k6-HCy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-NV-nrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="98"/>
+        </scene>
+        <!--Saved Swaps-->
+        <scene sceneID="Wop-cT-Lrh">
+            <objects>
+                <viewController id="ZhN-En-rxs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lk4-id-9Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-V8-t9U" userLabel="UI Container">
+                                <rect key="frame" x="57" y="148" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="01C-n5-22p"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="600" id="Fdn-qG-uSy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="IsK-Hw-nx3"/>
+                                    <constraint firstAttribute="width" constant="300" id="Twl-Yc-iMZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kTc-3U-KoG"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="nPD-FW-88i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PPu-jp-JIV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PPY-V8-t9U" firstAttribute="centerX" secondItem="Lk4-id-9Zg" secondAttribute="centerX" id="ZTi-fp-yt7"/>
+                            <constraint firstItem="PPY-V8-t9U" firstAttribute="centerY" secondItem="Lk4-id-9Zg" secondAttribute="centerY" id="o1z-y9-H3c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Saved Swaps" id="GBz-29-rQf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2PT-8Q-Sdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="860"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
