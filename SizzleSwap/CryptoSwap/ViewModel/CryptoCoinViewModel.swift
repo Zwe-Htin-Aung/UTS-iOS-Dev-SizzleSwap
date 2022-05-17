@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import SwiftUI
 
 class CryptoCoinViewModel: ObservableObject {
@@ -22,7 +21,7 @@ class CryptoCoinViewModel: ObservableObject {
         //
         let baseAndEndURL = baseUrl+topCoinsUrl
         if let url = URL(string: baseAndEndURL) {
-            URLSession.shared.dataTask(with: url {
+            URLSession.shared.dataTask(with: url) {
                 
             }
         }
