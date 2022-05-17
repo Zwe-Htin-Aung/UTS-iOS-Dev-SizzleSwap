@@ -55,9 +55,9 @@
 		87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizzleSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITests.swift; sourceTree = "<group>"; };
 		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
-		87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodeRequest.swift; path = SizzleSwap/CurrencySwap/CurrencyCodeRequest.swift; sourceTree = SOURCE_ROOT; };
-		87F440B6282E75E600891F3D /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodes.swift; path = SizzleSwap/CurrencySwap/CurrencyCodes.swift; sourceTree = SOURCE_ROOT; };
+		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencySwap/Controllers/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
+		87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodeRequest.swift; path = SizzleSwap/CurrencySwap/Model/CurrencyCodeRequest.swift; sourceTree = SOURCE_ROOT; };
+		87F440B6282E75E600891F3D /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodes.swift; path = SizzleSwap/CurrencySwap/Model/CurrencyCodes.swift; sourceTree = SOURCE_ROOT; };
 		8EBF217328311C1A00E38678 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		8EBF217528311CF500E38678 /* CryptoCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoins.swift; sourceTree = "<group>"; };
 		8EBF21782831203500E38678 /* CryptoCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoinViewModel.swift; sourceTree = "<group>"; };
@@ -155,11 +155,27 @@
 		8716726D282D2DC0004A8D2F /* CurrencySwap */ = {
 			isa = PBXGroup;
 			children = (
-				87F440AE282E133B00891F3D /* CurrencyViewController.swift */,
+				87F440B92833C51E00891F3D /* Model */,
+				87F440BA2833C52E00891F3D /* Controllers */,
+			);
+			path = CurrencySwap;
+			sourceTree = "<group>";
+		};
+		87F440B92833C51E00891F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */,
 				87F440B6282E75E600891F3D /* CurrencyCodes.swift */,
 			);
-			path = CurrencySwap;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87F440BA2833C52E00891F3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87F440AE282E133B00891F3D /* CurrencyViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8EBF216F28311BCC00E38678 /* CryptoSwap */ = {
