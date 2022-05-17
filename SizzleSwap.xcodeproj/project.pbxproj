@@ -16,10 +16,13 @@
 		8716725D282D2D7B004A8D2F /* SizzleSwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */; };
 		8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */; };
 		87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440AE282E133B00891F3D /* CurrencyViewController.swift */; };
-		87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B0282E13F700891F3D /* CryptoViewController.swift */; };
-		87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */; };
 		87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */; };
 		87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B6282E75E600891F3D /* CurrencyCodes.swift */; };
+		8EBF217428311C1A00E38678 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF217328311C1A00E38678 /* CryptoViewController.swift */; };
+		8EBF217628311CF500E38678 /* CryptoCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF217528311CF500E38678 /* CryptoCoins.swift */; };
+		8EBF21792831203500E38678 /* CryptoCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF21782831203500E38678 /* CryptoCoinViewModel.swift */; };
+		8EBF217B283120EA00E38678 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF217A283120EA00E38678 /* Settings.swift */; };
+		8EBF217E2831212F00E38678 /* SavedSwapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF217D2831212F00E38678 /* SavedSwapsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +56,14 @@
 		8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITests.swift; sourceTree = "<group>"; };
 		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
-		87F440B0282E13F700891F3D /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoViewController.swift; path = SizzleSwap/CryptoViewController.swift; sourceTree = SOURCE_ROOT; };
-		87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedSwapsViewController.swift; path = SizzleSwap/SavedSwapsViewController.swift; sourceTree = SOURCE_ROOT; };
 		87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodeRequest.swift; path = SizzleSwap/CurrencySwap/CurrencyCodeRequest.swift; sourceTree = SOURCE_ROOT; };
 		87F440B6282E75E600891F3D /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodes.swift; path = SizzleSwap/CurrencySwap/CurrencyCodes.swift; sourceTree = SOURCE_ROOT; };
+		8EBF217328311C1A00E38678 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		8EBF217528311CF500E38678 /* CryptoCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoins.swift; sourceTree = "<group>"; };
+		8EBF21782831203500E38678 /* CryptoCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoinViewModel.swift; sourceTree = "<group>"; };
+		8EBF217A283120EA00E38678 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		8EBF217D2831212F00E38678 /* SavedSwapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSwapsViewController.swift; sourceTree = "<group>"; };
+		8EBF217F28312D2600E38678 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +114,9 @@
 		8716723A282D2D7A004A8D2F /* SizzleSwap */ = {
 			isa = PBXGroup;
 			children = (
+				8EBF217C2831212000E38678 /* SavedSwaps */,
+				8EBF216F28311BCC00E38678 /* CryptoSwap */,
 				8716726D282D2DC0004A8D2F /* CurrencySwap */,
-				8716726E282D2DC9004A8D2F /* CryptoSwap */,
-				8716726F282D2E00004A8D2F /* SavedSwaps */,
 				8716726B282D2D8B004A8D2F /* View */,
 				8716723B282D2D7A004A8D2F /* AppDelegate.swift */,
 				8716723D282D2D7A004A8D2F /* SceneDelegate.swift */,
@@ -155,18 +162,54 @@
 			path = CurrencySwap;
 			sourceTree = "<group>";
 		};
-		8716726E282D2DC9004A8D2F /* CryptoSwap */ = {
+		8EBF216F28311BCC00E38678 /* CryptoSwap */ = {
 			isa = PBXGroup;
 			children = (
-				87F440B0282E13F700891F3D /* CryptoViewController.swift */,
+				8EBF217028311BD500E38678 /* Model */,
+				8EBF217128311BE300E38678 /* View */,
+				8EBF21772831201F00E38678 /* ViewModel */,
+				8EBF217228311BEA00E38678 /* Controller */,
+				8EBF217F28312D2600E38678 /* MyPlayground.playground */,
 			);
 			path = CryptoSwap;
 			sourceTree = "<group>";
 		};
-		8716726F282D2E00004A8D2F /* SavedSwaps */ = {
+		8EBF217028311BD500E38678 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				87F440B2282E1F8000891F3D /* SavedSwapsViewController.swift */,
+				8EBF217528311CF500E38678 /* CryptoCoins.swift */,
+				8EBF217A283120EA00E38678 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EBF217128311BE300E38678 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EBF217228311BEA00E38678 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8EBF217328311C1A00E38678 /* CryptoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8EBF21772831201F00E38678 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EBF21782831203500E38678 /* CryptoCoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8EBF217C2831212000E38678 /* SavedSwaps */ = {
+			isa = PBXGroup;
+			children = (
+				8EBF217D2831212F00E38678 /* SavedSwapsViewController.swift */,
 			);
 			path = SavedSwaps;
 			sourceTree = "<group>";
@@ -301,13 +344,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F440B1282E13F700891F3D /* CryptoViewController.swift in Sources */,
-				87F440B3282E1F8000891F3D /* SavedSwapsViewController.swift in Sources */,
+				8EBF217628311CF500E38678 /* CryptoCoins.swift in Sources */,
 				87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */,
 				87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */,
+				8EBF21792831203500E38678 /* CryptoCoinViewModel.swift in Sources */,
 				87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */,
 				87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */,
+				8EBF217428311C1A00E38678 /* CryptoViewController.swift in Sources */,
 				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
+				8EBF217E2831212F00E38678 /* SavedSwapsViewController.swift in Sources */,
+				8EBF217B283120EA00E38678 /* Settings.swift in Sources */,
 				8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
