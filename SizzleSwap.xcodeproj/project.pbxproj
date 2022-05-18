@@ -166,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				8EBF217028311BD500E38678 /* Model */,
-				8EBF217128311BE300E38678 /* View */,
 				8EBF21772831201F00E38678 /* ViewModel */,
 				8EBF217228311BEA00E38678 /* Controller */,
 				8EBF217F28312D2600E38678 /* MyPlayground.playground */,
@@ -181,13 +180,6 @@
 				8EBF217A283120EA00E38678 /* Settings.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		8EBF217128311BE300E38678 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		8EBF217228311BEA00E38678 /* Controller */ = {
@@ -523,6 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JAR78KDSZT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SizzleSwap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -550,6 +543,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JAR78KDSZT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SizzleSwap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
