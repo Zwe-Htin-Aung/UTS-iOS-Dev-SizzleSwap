@@ -15,6 +15,8 @@
 		87167253282D2D7B004A8D2F /* SizzleSwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87167252282D2D7B004A8D2F /* SizzleSwapTests.swift */; };
 		8716725D282D2D7B004A8D2F /* SizzleSwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */; };
 		8716725F282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */; };
+		8746DDFF283524DB00E0593E /* CurrencyConversionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746DDFE283524DB00E0593E /* CurrencyConversionRequest.swift */; };
+		8746DE012835277C00E0593E /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8746DE002835277C00E0593E /* CurrencyConversion.swift */; };
 		87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440AE282E133B00891F3D /* CurrencyViewController.swift */; };
 		87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */; };
 		87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F440B6282E75E600891F3D /* CurrencyCodes.swift */; };
@@ -58,6 +60,8 @@
 		87167258282D2D7B004A8D2F /* SizzleSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SizzleSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8716725C282D2D7B004A8D2F /* SizzleSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITests.swift; sourceTree = "<group>"; };
 		8716725E282D2D7B004A8D2F /* SizzleSwapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleSwapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8746DDFE283524DB00E0593E /* CurrencyConversionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionRequest.swift; sourceTree = "<group>"; };
+		8746DE002835277C00E0593E /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		87F440AE282E133B00891F3D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyViewController.swift; path = SizzleSwap/CurrencySwap/Controllers/CurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
 		87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodeRequest.swift; path = SizzleSwap/CurrencySwap/Model/CurrencyCodeRequest.swift; sourceTree = SOURCE_ROOT; };
 		87F440B6282E75E600891F3D /* CurrencyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyCodes.swift; path = SizzleSwap/CurrencySwap/Model/CurrencyCodes.swift; sourceTree = SOURCE_ROOT; };
@@ -110,7 +114,6 @@
 				F4581F1203F915A6D679F202 /* Pods-SizzleSwap.debug.xcconfig */,
 				3223745BFA2AB3593B5771BA /* Pods-SizzleSwap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,6 +194,8 @@
 			children = (
 				87F440B4282E73E300891F3D /* CurrencyCodeRequest.swift */,
 				87F440B6282E75E600891F3D /* CurrencyCodes.swift */,
+				8746DDFE283524DB00E0593E /* CurrencyConversionRequest.swift */,
+				8746DE002835277C00E0593E /* CurrencyConversion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,11 +429,13 @@
 				8EBF217628311CF500E38678 /* CryptoCoins.swift in Sources */,
 				87F440B5282E73E300891F3D /* CurrencyCodeRequest.swift in Sources */,
 				87167240282D2D7A004A8D2F /* HomeViewController.swift in Sources */,
+				8746DE012835277C00E0593E /* CurrencyConversion.swift in Sources */,
 				8EBF21792831203500E38678 /* CryptoCoinViewModel.swift in Sources */,
 				87F440AF282E133B00891F3D /* CurrencyViewController.swift in Sources */,
 				87F440B7282E75E600891F3D /* CurrencyCodes.swift in Sources */,
 				8EBF217428311C1A00E38678 /* CryptoViewController.swift in Sources */,
 				8716723C282D2D7A004A8D2F /* AppDelegate.swift in Sources */,
+				8746DDFF283524DB00E0593E /* CurrencyConversionRequest.swift in Sources */,
 				8EBF217E2831212F00E38678 /* SavedSwapsViewController.swift in Sources */,
 				8EBF217B283120EA00E38678 /* Settings.swift in Sources */,
 				8716723E282D2D7A004A8D2F /* SceneDelegate.swift in Sources */,

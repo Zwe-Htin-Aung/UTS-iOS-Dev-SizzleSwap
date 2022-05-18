@@ -58,7 +58,55 @@ class CurrencyViewController: UIViewController {
     }
     
     @IBAction func convertPressed(_ sender: UIButton) {
-        
+        if fieldsAreValid() {
+            let from = dropDownLabelFrom.text!
+            let to = dropDownLabelTo.text!
+            let amount = Float(fromAmountLabel.text ?? "0.0") ?? 0.0
+            let conversion = CurrencyConversionRequest().fetchConversion(from: from, to: to, amount: amount)
+            toAmountLabel.text = String(conversion.result)
+        }
+    }
+
+    func fieldsAreValid () -> Bool {
+        let amountPattern = #"^[\d]+\.?[\d]{0,2}?$"#
+        let currencyCodePattern = #"^[\S]{3}$"#
+        if fromAmountLabel.text?.range(of: amountPattern, options: .regularExpression) == nil {
+            setAlertTextField(item: fromAmountLabel, error: true, message: "Invalid Amount")
+            return false
+        }
+        if dropDownLabelFrom.text?.range(of: currencyCodePattern, options: .regularExpression) == nil {
+            setAlert(item: dropDownLabelFrom, error: true)
+            return false
+        }
+        if dropDownLabelTo.text?.range(of: currencyCodePattern, options: .regularExpression) == nil {
+            setAlert(item: dropDownLabelTo, error: true)
+            return false
+        }
+        setAlertTextField(item: fromAmountLabel, error: false, message: "")
+        setAlert(item: dropDownLabelFrom, error: false)
+        setAlert(item: dropDownLabelTo, error: false)
+        return true
+    }
+    
+    func setAlert(item : UILabel, error: Bool) {
+        if error {
+            item.layer.borderWidth = 5
+            item.layer.borderColor = UIColor.red.cgColor
+        } else {
+            item.layer.borderWidth = 0
+        }
+    }
+    
+    func setAlertTextField(item : UITextField, error: Bool, message: String) {
+        if error {
+            item.layer.borderWidth = 5
+            item.layer.borderColor = UIColor.red.cgColor
+            item.text = ""
+            item.placeholder = message
+        } else {
+            item.layer.borderWidth = 0
+            item.placeholder = "Amount"
+        }
     }
     
     func getCodes(currencyData : CurrencyCodes) -> [String] {

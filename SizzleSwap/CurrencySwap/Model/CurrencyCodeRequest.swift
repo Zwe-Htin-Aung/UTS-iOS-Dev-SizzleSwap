@@ -11,11 +11,11 @@ struct CurrencyCodeRequest {
     
     let apiKey = "XF7tAgubdBbD5VQr0BBCYjfUiJhXyDyV"
     let currencyCodeURL =  "https://api.apilayer.com/exchangerates_data/symbols"
-    // var result : CurrencyCodes
+    let emptyCurrencyCodes = CurrencyCodes(success: false, symbols: [:])
     
     func fetch() -> CurrencyCodes {
         let semaphore = DispatchSemaphore (value: 0)
-        var result : CurrencyCodes = CurrencyCodes(success: false, symbols: [:])
+        var result : CurrencyCodes = emptyCurrencyCodes
         var request = URLRequest(url: URL(string: currencyCodeURL)!,timeoutInterval: Double.infinity)
         request.httpMethod = "GET"
         request.addValue(apiKey, forHTTPHeaderField: "apikey")
@@ -38,14 +38,10 @@ struct CurrencyCodeRequest {
         let decoder = JSONDecoder()
         do {
             let currencyCodes = try decoder.decode(CurrencyCodes.self , from: currencyData)
-            print(currencyCodes.success)
-            for (code, currencyName) in currencyCodes.symbols {
-                print("Code: \(code) --> Currency: \(currencyName)")
-            }
             return currencyCodes
         } catch {
             print(error)
-            return CurrencyCodes(success: false, symbols: [:])
+            return emptyCurrencyCodes
         }
     }
 }

@@ -148,20 +148,24 @@
                                                             <action selector="dropDownFromPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="BRt-Sd-Qud"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hku-38-NnQ">
-                                                        <rect key="frame" x="21" y="11.5" width="83" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hku-38-NnQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="hku-38-NnQ" secondAttribute="bottom" id="AxC-j9-MoQ"/>
+                                                    <constraint firstItem="hku-38-NnQ" firstAttribute="top" secondItem="05b-Vd-h8J" secondAttribute="top" id="G2N-aB-ETJ"/>
                                                     <constraint firstItem="rkn-l1-oyp" firstAttribute="leading" secondItem="05b-Vd-h8J" secondAttribute="leading" id="KQJ-kT-2dj"/>
                                                     <constraint firstAttribute="trailing" secondItem="rkn-l1-oyp" secondAttribute="trailing" id="Noc-rp-7SX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hku-38-NnQ" secondAttribute="trailing" id="Sij-t1-5P0"/>
                                                     <constraint firstItem="hku-38-NnQ" firstAttribute="centerY" secondItem="05b-Vd-h8J" secondAttribute="centerY" id="T4L-IG-xbE"/>
                                                     <constraint firstItem="rkn-l1-oyp" firstAttribute="centerY" secondItem="05b-Vd-h8J" secondAttribute="centerY" id="d8H-Cm-O3K"/>
                                                     <constraint firstItem="hku-38-NnQ" firstAttribute="centerX" secondItem="05b-Vd-h8J" secondAttribute="centerX" id="hb6-Pt-SK3"/>
                                                     <constraint firstItem="rkn-l1-oyp" firstAttribute="top" secondItem="05b-Vd-h8J" secondAttribute="top" id="r4r-Go-feX"/>
+                                                    <constraint firstItem="hku-38-NnQ" firstAttribute="leading" secondItem="05b-Vd-h8J" secondAttribute="leading" id="suN-0L-TUp"/>
                                                     <constraint firstItem="rkn-l1-oyp" firstAttribute="centerX" secondItem="05b-Vd-h8J" secondAttribute="centerX" id="tXj-8f-CJU"/>
                                                     <constraint firstAttribute="bottom" secondItem="rkn-l1-oyp" secondAttribute="bottom" id="uVD-S3-w9s"/>
                                                 </constraints>
@@ -201,8 +205,8 @@
                                                             <action selector="dropDownToPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="fyE-LK-lSa"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-6g-Rcv">
-                                                        <rect key="frame" x="21" y="11.5" width="83" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-6g-Rcv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -210,8 +214,12 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="5u6-6g-Rcv" firstAttribute="centerX" secondItem="1An-dp-6Sj" secondAttribute="centerX" id="I55-Q2-Zxb"/>
+                                                    <constraint firstItem="5u6-6g-Rcv" firstAttribute="leading" secondItem="1An-dp-6Sj" secondAttribute="leading" id="T9U-Pe-XRV"/>
                                                     <constraint firstItem="vio-ho-CXe" firstAttribute="centerX" secondItem="1An-dp-6Sj" secondAttribute="centerX" id="a25-oC-rKZ"/>
                                                     <constraint firstItem="5u6-6g-Rcv" firstAttribute="centerY" secondItem="1An-dp-6Sj" secondAttribute="centerY" id="dTq-tZ-9cJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5u6-6g-Rcv" secondAttribute="trailing" id="gDL-5P-lwK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5u6-6g-Rcv" secondAttribute="bottom" id="hth-oe-Nvg"/>
+                                                    <constraint firstItem="5u6-6g-Rcv" firstAttribute="top" secondItem="1An-dp-6Sj" secondAttribute="top" id="iTk-7Q-ZwE"/>
                                                     <constraint firstAttribute="trailing" secondItem="vio-ho-CXe" secondAttribute="trailing" id="kJC-1J-tkd"/>
                                                     <constraint firstAttribute="bottom" secondItem="vio-ho-CXe" secondAttribute="bottom" id="mZX-Or-gMG"/>
                                                     <constraint firstItem="vio-ho-CXe" firstAttribute="centerY" secondItem="1An-dp-6Sj" secondAttribute="centerY" id="paT-HO-phh"/>
