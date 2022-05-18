@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Glp-Vq-ef4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,48 +36,45 @@
                                 <rect key="frame" x="57" y="148" width="300" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SizzleSwap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-1r-ECC">
-                                        <rect key="frame" x="54.5" y="20" width="191.5" height="37"/>
-                                        <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="37"/>
-                                        <color key="textColor" red="0.82745099070000006" green="0.38431376220000002" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="81" y="20" width="138.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-wx-2Xw">
-                                        <rect key="frame" x="50" y="257" width="200" height="40"/>
+                                        <rect key="frame" x="50" y="253.5" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="6mV-30-8ZZ"/>
                                             <constraint firstAttribute="height" constant="40" id="BLN-en-Vow"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.8302162247474747" green="0.31673338166050691" blue="0.38753919862720915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Swap Currency"/>
                                         <connections>
-                                            <segue destination="U9O-gV-1DQ" kind="show" identifier="currencySwap" id="b5y-3a-YH9"/>
+                                            <segue destination="U9O-gV-1DQ" kind="show" id="b5y-3a-YH9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG7-0Q-w2M">
-                                        <rect key="frame" x="50" y="327" width="200" height="40"/>
+                                        <rect key="frame" x="50" y="323.5" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BhJ-8L-5sA"/>
                                             <constraint firstAttribute="width" constant="200" id="E0m-JG-l1a"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Swap Cryptocurrency"/>
                                         <connections>
-                                            <segue destination="0eD-QZ-SFS" kind="show" identifier="cryptoSwap" id="4yb-uQ-aN2"/>
+                                            <segue destination="0eD-QZ-SFS" kind="show" id="4yb-uQ-aN2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhE-lj-ErI">
-                                        <rect key="frame" x="50" y="397" width="200" height="40"/>
+                                        <rect key="frame" x="50" y="393.5" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="0f0-wT-3o2"/>
                                             <constraint firstAttribute="height" constant="40" id="dhb-Xr-FVO"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Saved Swaps"/>
                                         <connections>
-                                            <segue destination="ZhN-En-rxs" kind="show" identifier="savedSwaps" id="gEV-7h-UZz"/>
+                                            <segue destination="ZhN-En-rxs" kind="show" id="gEV-7h-UZz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -96,7 +93,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.13303551228682525" green="0.14316135052595771" blue="0.23533312207575752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ghG-av-zRK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HPv-gc-Fz5"/>
                             <constraint firstItem="ghG-av-zRK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S7F-DI-Y9P"/>
@@ -106,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+            <point key="canvasLocation" x="20" y="98"/>
         </scene>
         <!--Currency Swap-->
         <scene sceneID="YZ0-Ps-Vpa">
@@ -128,44 +125,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZYn-Me-X1T">
                                         <rect key="frame" x="25" y="194" width="250" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-EX-OYt" userLabel="Amount">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-EX-OYt">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="05b-Vd-h8J" userLabel="DropDown View">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-l1-oyp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="strokeColor" systemColor="systemGray5Color"/>
-                                                            </backgroundConfiguration>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="dropDownFromPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="BRt-Sd-Qud"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hku-38-NnQ">
-                                                        <rect key="frame" x="21" y="11.5" width="83" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="rkn-l1-oyp" firstAttribute="leading" secondItem="05b-Vd-h8J" secondAttribute="leading" id="KQJ-kT-2dj"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rkn-l1-oyp" secondAttribute="trailing" id="Noc-rp-7SX"/>
-                                                    <constraint firstItem="hku-38-NnQ" firstAttribute="centerY" secondItem="05b-Vd-h8J" secondAttribute="centerY" id="T4L-IG-xbE"/>
-                                                    <constraint firstItem="rkn-l1-oyp" firstAttribute="centerY" secondItem="05b-Vd-h8J" secondAttribute="centerY" id="d8H-Cm-O3K"/>
-                                                    <constraint firstItem="hku-38-NnQ" firstAttribute="centerX" secondItem="05b-Vd-h8J" secondAttribute="centerX" id="hb6-Pt-SK3"/>
-                                                    <constraint firstItem="rkn-l1-oyp" firstAttribute="top" secondItem="05b-Vd-h8J" secondAttribute="top" id="r4r-Go-feX"/>
-                                                    <constraint firstItem="rkn-l1-oyp" firstAttribute="centerX" secondItem="05b-Vd-h8J" secondAttribute="centerX" id="tXj-8f-CJU"/>
-                                                    <constraint firstAttribute="bottom" secondItem="rkn-l1-oyp" secondAttribute="bottom" id="uVD-S3-w9s"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KS3-Qy-OjI"/>
@@ -181,44 +145,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aC7-9b-hKC">
                                         <rect key="frame" x="25" y="328" width="250" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Result" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eME-gl-aui">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eME-gl-aui">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1An-dp-6Sj" userLabel="DropDown View">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vio-ho-CXe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background">
-                                                                <color key="strokeColor" systemColor="systemGray5Color"/>
-                                                            </backgroundConfiguration>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="dropDownToPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="fyE-LK-lSa"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--currency--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-6g-Rcv">
-                                                        <rect key="frame" x="21" y="11.5" width="83" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="5u6-6g-Rcv" firstAttribute="centerX" secondItem="1An-dp-6Sj" secondAttribute="centerX" id="I55-Q2-Zxb"/>
-                                                    <constraint firstItem="vio-ho-CXe" firstAttribute="centerX" secondItem="1An-dp-6Sj" secondAttribute="centerX" id="a25-oC-rKZ"/>
-                                                    <constraint firstItem="5u6-6g-Rcv" firstAttribute="centerY" secondItem="1An-dp-6Sj" secondAttribute="centerY" id="dTq-tZ-9cJ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="vio-ho-CXe" secondAttribute="trailing" id="kJC-1J-tkd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="vio-ho-CXe" secondAttribute="bottom" id="mZX-Or-gMG"/>
-                                                    <constraint firstItem="vio-ho-CXe" firstAttribute="centerY" secondItem="1An-dp-6Sj" secondAttribute="centerY" id="paT-HO-phh"/>
-                                                    <constraint firstItem="vio-ho-CXe" firstAttribute="top" secondItem="1An-dp-6Sj" secondAttribute="top" id="v6C-2x-pKV"/>
-                                                    <constraint firstItem="vio-ho-CXe" firstAttribute="leading" secondItem="1An-dp-6Sj" secondAttribute="leading" id="weg-JF-id4"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="BKW-lE-zJg"/>
@@ -262,14 +193,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Currency Swap" id="pMO-FY-sQI"/>
-                    <connections>
-                        <outlet property="dropDownLabelFrom" destination="hku-38-NnQ" id="pIj-gH-pUd"/>
-                        <outlet property="dropDownLabelTo" destination="5u6-6g-Rcv" id="fB7-KK-T69"/>
-                        <outlet property="dropDownViewFrom" destination="05b-Vd-h8J" id="NrD-DQ-gCz"/>
-                        <outlet property="dropDownViewTo" destination="1An-dp-6Sj" id="MLu-d8-hcY"/>
-                        <outlet property="fromAmountLabel" destination="SVU-EX-OYt" id="IKC-6I-EEP"/>
-                        <outlet property="toAmountLabel" destination="eME-gl-aui" id="52n-tT-BfJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swo-TS-wPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +217,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pni-YN-zH8"/>
-                        <color key="backgroundColor" red="0.13303551229999999" green="0.14316135050000001" blue="0.23533312209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerX" secondItem="i5P-eM-ctT" secondAttribute="centerX" id="ANU-8s-Zz1"/>
                             <constraint firstItem="PfT-xy-Eg4" firstAttribute="centerY" secondItem="i5P-eM-ctT" secondAttribute="centerY" id="Kdw-Tw-5B2"/>
@@ -309,7 +232,7 @@
         <!--Saved Swaps-->
         <scene sceneID="Wop-cT-Lrh">
             <objects>
-                <viewController id="ZhN-En-rxs" customClass="SavedSwapsViewController" customModule="SizzleSwap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZhN-En-rxs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lk4-id-9Zg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,7 +250,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PPu-jp-JIV"/>
-                        <color key="backgroundColor" red="0.13303551229999999" green="0.14316135050000001" blue="0.23533312209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PPY-V8-t9U" firstAttribute="centerX" secondItem="Lk4-id-9Zg" secondAttribute="centerX" id="ZTi-fp-yt7"/>
                             <constraint firstItem="PPY-V8-t9U" firstAttribute="centerY" secondItem="Lk4-id-9Zg" secondAttribute="centerY" id="o1z-y9-H3c"/>
@@ -337,15 +260,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PT-8Q-Sdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889.85507246376824" y="859.82142857142856"/>
+            <point key="canvasLocation" x="890" y="860"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
