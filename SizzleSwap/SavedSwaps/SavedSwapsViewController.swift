@@ -9,9 +9,9 @@ import UIKit
 
 class SavedSwapsViewController: UIViewController {
     
-    let names = ["daisy", "lily", "boby", "scooby", "satang"]
     @IBOutlet var tableView: UITableView!
     
+    let data = UserDefaults.standard.object(forKey: "converted") as? String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,8 @@ class SavedSwapsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //let value = UserDefaults.standard.string(forKey: "converted")
+        
+        
     }
 
 }
@@ -31,17 +32,16 @@ extension SavedSwapsViewController:UITableViewDelegate {
 extension SavedSwapsViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.names.count
-        //return 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let title = self.names[indexPath.row]
+        //let title = self.values![indexPath.row]
         
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = title
+        cell.textLabel?.text = "test"
         
         return cell
     }
