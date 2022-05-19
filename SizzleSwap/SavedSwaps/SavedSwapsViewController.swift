@@ -8,22 +8,45 @@
 import UIKit
 
 class SavedSwapsViewController: UIViewController {
-
+    
+    let names = ["daisy", "lily", "boby", "scooby", "satang"]
+    @IBOutlet var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        //let value = UserDefaults.standard.string(forKey: "converted")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+extension SavedSwapsViewController:UITableViewDelegate {
+    
+}
+
+extension SavedSwapsViewController:UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.names.count
+        //return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let title = self.names[indexPath.row]
+        
+        let cell = UITableViewCell()
+        
+        cell.textLabel?.text = title
+        
+        return cell
+    }
+    
+    
+}
+
+
