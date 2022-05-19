@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Glp-Vq-ef4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -234,9 +234,9 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-Hn-KUH">
-                                        <rect key="frame" x="100" y="418" width="100" height="40"/>
+                                        <rect key="frame" x="75" y="448" width="150" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="SuK-49-L8y"/>
+                                            <constraint firstAttribute="width" constant="150" id="SuK-49-L8y"/>
                                             <constraint firstAttribute="height" constant="40" id="Y6k-I6-IyG"/>
                                         </constraints>
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -248,31 +248,44 @@
                                             <action selector="convertPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="iRW-xg-64H"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADC-mq-buy">
-                                        <rect key="frame" x="85" y="509" width="131" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADC-mq-buy">
+                                        <rect key="frame" x="75" y="508" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0dH-Jl-hQs"/>
+                                            <constraint firstAttribute="width" constant="150" id="8ej-FR-7Uj"/>
+                                        </constraints>
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save Swap">
-                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="savePressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="DXD-GO-1VJ"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joh-KH-tA2" userLabel="feedbackLabel">
+                                        <rect key="frame" x="150" y="398" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.82745099070000006" green="0.31764706970000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="A6k-bP-8Og" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="6dJ-QG-OFM"/>
                                     <constraint firstItem="ZYn-Me-X1T" firstAttribute="top" secondItem="Qrz-lt-GrS" secondAttribute="bottom" constant="20" id="7rT-ng-HdL"/>
                                     <constraint firstItem="aC7-9b-hKC" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="8Ed-D0-f6M"/>
+                                    <constraint firstItem="ADC-mq-buy" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="DDJ-Ck-YVu"/>
                                     <constraint firstItem="Qrz-lt-GrS" firstAttribute="top" secondItem="PgU-Si-z6x" secondAttribute="top" constant="150" id="EsS-fU-ogb"/>
                                     <constraint firstItem="9Pn-Hn-KUH" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="F7p-0a-GbO"/>
                                     <constraint firstAttribute="width" constant="300" id="Jvz-Po-AFa"/>
                                     <constraint firstItem="A6k-bP-8Og" firstAttribute="top" secondItem="ZYn-Me-X1T" secondAttribute="bottom" constant="50" id="M6f-rd-NzV"/>
                                     <constraint firstItem="aC7-9b-hKC" firstAttribute="top" secondItem="A6k-bP-8Og" secondAttribute="bottom" constant="20" id="YhW-L5-VWw"/>
+                                    <constraint firstItem="joh-KH-tA2" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="ZA3-tr-a2x"/>
                                     <constraint firstItem="Qrz-lt-GrS" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="aUW-60-wg8"/>
                                     <constraint firstItem="ZYn-Me-X1T" firstAttribute="centerX" secondItem="PgU-Si-z6x" secondAttribute="centerX" id="cZB-Ca-Tht"/>
-                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="top" secondItem="aC7-9b-hKC" secondAttribute="bottom" constant="50" id="d0O-zq-gyA"/>
+                                    <constraint firstItem="9Pn-Hn-KUH" firstAttribute="top" secondItem="aC7-9b-hKC" secondAttribute="bottom" constant="80" id="d0O-zq-gyA"/>
+                                    <constraint firstItem="ADC-mq-buy" firstAttribute="top" secondItem="9Pn-Hn-KUH" secondAttribute="bottom" constant="20" id="dgI-vs-xFM"/>
+                                    <constraint firstItem="joh-KH-tA2" firstAttribute="top" secondItem="aC7-9b-hKC" secondAttribute="bottom" constant="30" id="jjQ-DX-5KD"/>
                                     <constraint firstAttribute="height" constant="600" id="zsH-cQ-JRG"/>
                                 </constraints>
                             </view>
@@ -290,7 +303,9 @@
                         <outlet property="dropDownLabelTo" destination="5u6-6g-Rcv" id="fB7-KK-T69"/>
                         <outlet property="dropDownViewFrom" destination="05b-Vd-h8J" id="NrD-DQ-gCz"/>
                         <outlet property="dropDownViewTo" destination="1An-dp-6Sj" id="MLu-d8-hcY"/>
+                        <outlet property="feedbackLabel" destination="joh-KH-tA2" id="8R5-9O-ZT4"/>
                         <outlet property="fromAmountLabel" destination="SVU-EX-OYt" id="IKC-6I-EEP"/>
+                        <outlet property="saveSwapButton" destination="ADC-mq-buy" id="Zed-YK-Bt2"/>
                         <outlet property="toAmountLabel" destination="eME-gl-aui" id="52n-tT-BfJ"/>
                     </connections>
                 </viewController>

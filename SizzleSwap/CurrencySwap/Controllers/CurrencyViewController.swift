@@ -17,13 +17,17 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var dropDownLabelFrom: UILabel!
     @IBOutlet weak var dropDownViewTo: UIView!
     @IBOutlet weak var dropDownLabelTo: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
+    @IBOutlet weak var saveSwapButton: UIButton!
     var dropDownFrom = DropDown()
     var dropDownTo = DropDown()
+    var conversion : CurrencyConversion = CurrencyConversionRequest().emptyConversion;
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         toAmountLabel.isUserInteractionEnabled = false
+        saveSwapButton.isUserInteractionEnabled = false
         let codes = getCodes(currencyData: CurrencyCodeRequest().fetch())
         setUpDropDownFrom(dataSource: codes)
         setUpDropDownTo(dataSource: codes)
@@ -62,27 +66,39 @@ class CurrencyViewController: UIViewController {
             let from = dropDownLabelFrom.text!
             let to = dropDownLabelTo.text!
             let amount = Float(fromAmountLabel.text ?? "0.0") ?? 0.0
-            let conversion = CurrencyConversionRequest().fetchConversion(from: from, to: to, amount: amount)
+            conversion = CurrencyConversionRequest().fetchConversion(from: from, to: to, amount: amount)
             toAmountLabel.text = String(conversion.result)
+        }
+        if conversion.success {
+            feedbackLabel.text = "Successful Swap!"
+            feedbackLabel.textColor = UIColor.green
         }
     }
 
     @IBAction func savePressed(_ sender: UIButton) {
-        print("saveed!")
+        if conversion.success {
+            
+        }
     }
     
     func fieldsAreValid () -> Bool {
         let amountPattern = #"^[\d]+\.?[\d]{0,2}?$"#
         let currencyCodePattern = #"^[\S]{3}$"#
         if fromAmountLabel.text?.range(of: amountPattern, options: .regularExpression) == nil {
-            setAlertTextField(item: fromAmountLabel, error: true, message: "Invalid Amount")
+            setAlert(item: dropDownLabelFrom, error: false)
+            setAlert(item: dropDownLabelTo, error: false)
+            setAlertTextField(item: fromAmountLabel, error: true, message: "Please Enter a Valid Amount")
             return false
         }
         if dropDownLabelFrom.text?.range(of: currencyCodePattern, options: .regularExpression) == nil {
+            setAlert(item: dropDownLabelTo, error: false)
+            setAlertTextField(item: fromAmountLabel, error: false, message: "")
             setAlert(item: dropDownLabelFrom, error: true)
             return false
         }
         if dropDownLabelTo.text?.range(of: currencyCodePattern, options: .regularExpression) == nil {
+            setAlert(item: dropDownLabelFrom, error: false)
+            setAlertTextField(item: fromAmountLabel, error: false, message: "")
             setAlert(item: dropDownLabelTo, error: true)
             return false
         }
@@ -96,8 +112,10 @@ class CurrencyViewController: UIViewController {
         if error {
             item.layer.borderWidth = 5
             item.layer.borderColor = UIColor.red.cgColor
+            feedbackLabel.text = "Please Select Valid Currencies"
         } else {
             item.layer.borderWidth = 0
+            feedbackLabel.text = ""
         }
     }
     
@@ -106,10 +124,10 @@ class CurrencyViewController: UIViewController {
             item.layer.borderWidth = 5
             item.layer.borderColor = UIColor.red.cgColor
             item.text = ""
-            item.placeholder = message
+            feedbackLabel.text = message
         } else {
             item.layer.borderWidth = 0
-            item.placeholder = "Amount"
+            feedbackLabel.text = ""
         }
     }
     
