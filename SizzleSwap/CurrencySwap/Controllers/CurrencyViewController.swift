@@ -70,6 +70,7 @@ class CurrencyViewController: UIViewController {
             toAmountLabel.text = String(conversion.result)
         }
         if conversion.success {
+            saveSwapButton.isUserInteractionEnabled = true
             feedbackLabel.text = "Successful Swap!"
             feedbackLabel.textColor = UIColor.black
         }
