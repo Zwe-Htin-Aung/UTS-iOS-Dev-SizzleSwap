@@ -6,24 +6,25 @@
 //
 
 import UIKit
+import SwiftUI
+
+
 
 class CryptoViewController: UIViewController {
+    override func viewWillAppear(_ animated: Bool) {
+    }
 
+    @IBOutlet var cryptoViewContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    let cryptoView = CryptoView()
+    let childView = UIHostingController(rootView: cryptoView)
+    addChild(childView)
+    
+    cryptoViewContainer.addSubview(childView.view)
+    childView.didMove(toParent: self)
     }
-    */
-
 }
