@@ -239,12 +239,25 @@
                                             <constraint firstAttribute="width" constant="100" id="SuK-49-L8y"/>
                                             <constraint firstAttribute="height" constant="40" id="Y6k-I6-IyG"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Convert">
                                             <color key="baseBackgroundColor" red="0.82745099070000006" green="0.31764706970000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="convertPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="iRW-xg-64H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADC-mq-buy">
+                                        <rect key="frame" x="85" y="509" width="131" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save Swap">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="savePressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="cr0-CZ-zEJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -283,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swo-TS-wPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="-618"/>
+            <point key="canvasLocation" x="889.85507246376824" y="-618.08035714285711"/>
         </scene>
         <!--Crypto Swap-->
         <scene sceneID="xJq-25-VUG">

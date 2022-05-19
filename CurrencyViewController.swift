@@ -17,6 +17,9 @@ class CurrencyViewController: UIViewController {
         
     }
     
+    @IBAction func savePressed(_ sender: UIButton) {
+    }
+    
     @IBAction func convertPressed(_ sender: UIButton) {
         currencyCodeRequest.fetch()
     }
