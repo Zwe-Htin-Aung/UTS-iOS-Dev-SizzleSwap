@@ -75,13 +75,19 @@ class CurrencyViewController: UIViewController {
         }
     }
 
-    let conversionArray = [CurrencyConversion]()
+    //let conversionArray = [CurrencyConversion]()
     
     @IBAction func savePressed(_ sender: UIButton) {
         
         if conversion.success {
-            UserDefaults.standard.set(conversionArray, forKey: "converted")
-            
+            if var conversionArray: [CurrencyConversion] = (UserDefaults.standard.object(forKey: "conversionArray") as? [CurrencyConversion]) {
+                conversionArray.append(conversion)
+            }
+            else {
+                var conversionArray : [CurrencyConversion] = []
+                conversionArray.append(conversion)
+                UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
+            }
         }
     }
     
