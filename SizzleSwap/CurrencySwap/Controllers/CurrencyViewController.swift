@@ -71,7 +71,7 @@ class CurrencyViewController: UIViewController {
         }
         if conversion.success {
             feedbackLabel.text = "Successful Swap!"
-            feedbackLabel.textColor = UIColor.green
+            feedbackLabel.textColor = UIColor.black
         }
     }
 
@@ -88,6 +88,8 @@ class CurrencyViewController: UIViewController {
                 conversionArray.append(conversion)
                 UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
             }
+            feedbackLabel.text = "Successfully Saved!"
+            feedbackLabel.textColor = UIColor.black
         }
     }
     
