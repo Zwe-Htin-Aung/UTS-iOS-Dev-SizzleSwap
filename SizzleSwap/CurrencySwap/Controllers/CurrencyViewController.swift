@@ -67,6 +67,10 @@ class CurrencyViewController: UIViewController {
         }
     }
 
+    @IBAction func savePressed(_ sender: UIButton) {
+        print("saveed!")
+    }
+    
     func fieldsAreValid () -> Bool {
         let amountPattern = #"^[\d]+\.?[\d]{0,2}?$"#
         let currencyCodePattern = #"^[\S]{3}$"#
