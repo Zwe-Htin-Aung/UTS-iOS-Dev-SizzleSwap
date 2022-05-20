@@ -70,14 +70,28 @@ class CurrencyViewController: UIViewController {
             toAmountLabel.text = String(conversion.result)
         }
         if conversion.success {
+            saveSwapButton.isUserInteractionEnabled = true
             feedbackLabel.text = "Successful Swap!"
-            feedbackLabel.textColor = UIColor.green
+            feedbackLabel.textColor = UIColor.black
         }
     }
 
+    let conversionArray = [CurrencyConversion]()
+    
     @IBAction func savePressed(_ sender: UIButton) {
+        
         if conversion.success {
-            
+            if var conversionArray: [CurrencyConversion] = (UserDefaults.standard.object(forKey: "conversionArray") as? [CurrencyConversion]) {
+                conversionArray.append(conversion)
+            }
+            else {
+                var conversionArray : [CurrencyConversion] = []
+                conversionArray.append(conversion)
+                //UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(conversionArray), forKey: "conversionArray")
+            }
+            feedbackLabel.text = "Successfully Saved!"
+            feedbackLabel.textColor = UIColor.black
         }
     }
     

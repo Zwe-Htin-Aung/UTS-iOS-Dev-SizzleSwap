@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CurrencyConversion : Decodable {
+struct CurrencyConversion : Codable { // was Decodable
     var date : String
     var info : Info
     var query : Query
@@ -15,12 +15,12 @@ struct CurrencyConversion : Decodable {
     var success : Bool
 }
 
-struct Info : Decodable {
+struct Info : Codable {
     var rate : Float
     var timestamp : Int
 }
 
-struct Query : Decodable {
+struct Query : Codable {
     var amount : Float
     var from : String
     var to : String
