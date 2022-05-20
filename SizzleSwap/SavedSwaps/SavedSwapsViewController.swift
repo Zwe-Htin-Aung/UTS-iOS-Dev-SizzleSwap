@@ -19,7 +19,6 @@ class SavedSwapsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        //tabledata = UserDefaults.standard.array(forKey: "conversionArray") ?? []
         self.tableData = readData()
         tableView.reloadData()
         
@@ -55,7 +54,7 @@ extension SavedSwapsViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        title = tableData[indexPath.row] as? String
+        title = tableData[indexPath.row] as? Any as? String
         
         //let cell = UITableViewCell()
         
