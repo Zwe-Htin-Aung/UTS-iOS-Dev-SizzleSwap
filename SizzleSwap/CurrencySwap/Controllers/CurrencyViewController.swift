@@ -76,7 +76,7 @@ class CurrencyViewController: UIViewController {
         }
     }
 
-    //let conversionArray = [CurrencyConversion]()
+    let conversionArray = [CurrencyConversion]()
     
     @IBAction func savePressed(_ sender: UIButton) {
         
