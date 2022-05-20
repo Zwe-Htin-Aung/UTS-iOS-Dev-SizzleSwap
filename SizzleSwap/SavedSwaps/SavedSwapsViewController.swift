@@ -11,7 +11,10 @@ class SavedSwapsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var tableData: [CurrencyConversion] = []
+    //this is the original data
+    //var tableData: [CurrencyConversion] = []
+    //this is just sample data
+    var sampleData = ["AUD -> BDT", "EUR -> USD", "BDT -> USD"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +22,13 @@ class SavedSwapsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.tableData = readData()
+        //self.tableData = readData()
         tableView.reloadData()
         
     }
     
-    func readData() -> [CurrencyConversion]{
+    //original data
+    /* func readData() -> [CurrencyConversion]{
         // Read from User Defaults
         // This should happen at the HighScrollViewController
         
@@ -39,10 +43,30 @@ class SavedSwapsViewController: UIViewController {
         } else {
             return []
         }
-    }
+    } */
 }
 
+//delete saved
+
 extension SavedSwapsViewController:UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            tableView.beginUpdates()
+            
+            sampleData.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.endUpdates()
+        }
+    }
+    
     
 }
 
@@ -53,19 +77,20 @@ extension SavedSwapsViewController:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return sampleData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        title = tableData[indexPath.row] as? Any as? String
+        //using sample data
+        title = sampleData[indexPath.row]
+        
+        //title = tableData[indexPath.row] as? Any as? String
         
         //let cell = UITableViewCell()
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
-        
         cell.textLabel?.text = title
-        
         return cell
     }
     
