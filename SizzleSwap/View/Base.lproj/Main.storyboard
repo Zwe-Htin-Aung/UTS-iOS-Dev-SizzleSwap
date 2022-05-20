@@ -299,7 +299,13 @@
                             <constraint firstItem="PgU-Si-z6x" firstAttribute="centerY" secondItem="A3A-uA-tg2" secondAttribute="centerY" id="joy-9o-5uo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Currency Swap" id="pMO-FY-sQI"/>
+                    <navigationItem key="navigationItem" title="Currency Swap" id="pMO-FY-sQI">
+                        <barButtonItem key="rightBarButtonItem" title="Favourites★" style="plain" id="kJt-Hn-Hvp">
+                            <connections>
+                                <segue destination="ZhN-En-rxs" kind="show" id="tq2-Iq-n2d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dropDownLabelFrom" destination="hku-38-NnQ" id="pIj-gH-pUd"/>
                         <outlet property="dropDownLabelTo" destination="5u6-6g-Rcv" id="fB7-KK-T69"/>
