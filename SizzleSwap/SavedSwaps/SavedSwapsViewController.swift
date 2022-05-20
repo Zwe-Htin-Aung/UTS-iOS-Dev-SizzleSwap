@@ -11,7 +11,7 @@ class SavedSwapsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var tabledata = [Any]()
+    var tableData: [CurrencyConversion] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +19,28 @@ class SavedSwapsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tabledata = UserDefaults.standard.array(forKey: "conversionArray") ?? []
+        //tabledata = UserDefaults.standard.array(forKey: "conversionArray") ?? []
+        self.tableData = readData()
         tableView.reloadData()
         
     }
-
+    
+    func readData() -> [CurrencyConversion]{
+        // Read from User Defaults
+        // This should happen at the HighScrollViewController
+        
+        let defaults = UserDefaults.standard;
+        
+        if let savedArrayData = defaults.value(forKey:"conversionArray") as? Data {
+            if let array = try? PropertyListDecoder().decode(Array<CurrencyConversion>.self, from: savedArrayData) {
+                return array
+            } else {
+                return []
+            }
+        } else {
+            return []
+        }
+    }
 }
 
 extension SavedSwapsViewController:UITableViewDelegate {
@@ -33,15 +50,17 @@ extension SavedSwapsViewController:UITableViewDelegate {
 extension SavedSwapsViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tabledata.count
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        title = tabledata[indexPath.row] as? String
+        title = tableData[indexPath.row] as? String
         
-        let cell = UITableViewCell()
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
+        //let cell = UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
+        
         cell.textLabel?.text = title
         
         return cell

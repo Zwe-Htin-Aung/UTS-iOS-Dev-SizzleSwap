@@ -87,7 +87,8 @@ class CurrencyViewController: UIViewController {
             else {
                 var conversionArray : [CurrencyConversion] = []
                 conversionArray.append(conversion)
-                UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
+                //UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(conversionArray), forKey: "conversionArray")
             }
             feedbackLabel.text = "Successfully Saved!"
             feedbackLabel.textColor = UIColor.black
