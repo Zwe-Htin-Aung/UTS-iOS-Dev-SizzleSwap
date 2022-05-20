@@ -2,17 +2,23 @@
 //  SavedSwapsViewController.swift
 //  SizzleSwap
 //
-//  Created by Samuel Polgar on 15/5/2022.
+//  Created by Saoban Salwa Habib on 17/5/2022.
 //
 
 import UIKit
 
 class SavedSwapsViewController: UIViewController {
     
+    struct Conversions {
+        var from: String
+        var to: String
+    }
+    
     @IBOutlet var tableView: UITableView!
     
     //this is the original data
     //var tableData: [CurrencyConversion] = []
+    
     //this is just sample data
     var sampleData = ["AUD -> BDT", "EUR -> USD", "BDT -> USD"]
     
@@ -46,7 +52,7 @@ class SavedSwapsViewController: UIViewController {
     } */
 }
 
-//delete saved
+//delete saved conversions
 
 extension SavedSwapsViewController:UITableViewDelegate {
     
