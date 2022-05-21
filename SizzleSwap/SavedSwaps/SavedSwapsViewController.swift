@@ -9,39 +9,23 @@ import UIKit
 
 class SavedSwapsViewController: UIViewController {
     
-    struct Conversions {
-        var from: String
-        var to: String
-    }
-    
     @IBOutlet var tableView: UITableView!
-    
-    //this is the original data
-    //var tableData: [CurrencyConversion] = []
-    
-    //this is just sample data
-    var sampleData = ["AUD -> BDT", "EUR -> USD", "BDT -> USD"]
+    var conversions: [CurrencyConversion] = []
+    //var conversions = ["AUD -> BDT", "EUR -> USD", "BDT -> USD"]
+    let defaults = UserDefaults.standard;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        conversions = readSavedConversions()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //self.tableData = readData()
         tableView.reloadData()
-        
     }
     
-    //original data
-    /* func readData() -> [CurrencyConversion]{
-        // Read from User Defaults
-        // This should happen at the HighScrollViewController
-        
-        let defaults = UserDefaults.standard;
-        
-        if let savedArrayData = defaults.value(forKey:"conversionArray") as? Data {
-            if let array = try? PropertyListDecoder().decode(Array<CurrencyConversion>.self, from: savedArrayData) {
+    // load data
+    func readSavedConversions() -> [CurrencyConversion] {
+        if let savedConversionData = defaults.value(forKey:"conversions") as? Data {
+            if let array = try? PropertyListDecoder().decode(Array<CurrencyConversion>.self, from: savedConversionData) {
                 return array
             } else {
                 return []
@@ -49,7 +33,7 @@ class SavedSwapsViewController: UIViewController {
         } else {
             return []
         }
-    } */
+    }
 }
 
 //delete saved conversions
@@ -62,13 +46,10 @@ extension SavedSwapsViewController:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
             tableView.beginUpdates()
-            
-            sampleData.remove(at: indexPath.row)
-            
+            conversions.remove(at: indexPath.row)
+            defaults.set(try? PropertyListEncoder().encode(conversions), forKey: "conversions")
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
             tableView.endUpdates()
         }
     }
@@ -78,25 +59,15 @@ extension SavedSwapsViewController:UITableViewDelegate {
 
 extension SavedSwapsViewController:UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sampleData.count
+        return conversions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //using sample data
-        title = sampleData[indexPath.row]
-        
-        //title = tableData[indexPath.row] as? Any as? String
-        
-        //let cell = UITableViewCell()
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
-        cell.textLabel?.text = title
+        cell.textLabel?.text = String(conversions[indexPath.row].query.from)
+        cell.detailTextLabel?.text = String(conversions[indexPath.row].query.to)
         return cell
     }
     

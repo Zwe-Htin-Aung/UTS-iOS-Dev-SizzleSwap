@@ -75,23 +75,31 @@ class CurrencyViewController: UIViewController {
             feedbackLabel.textColor = UIColor.black
         }
     }
-
-    let conversionArray = [CurrencyConversion]()
     
     @IBAction func savePressed(_ sender: UIButton) {
         
         if conversion.success {
-            if var conversionArray: [CurrencyConversion] = (UserDefaults.standard.object(forKey: "conversionArray") as? [CurrencyConversion]) {
-                conversionArray.append(conversion)
-            }
-            else {
-                var conversionArray : [CurrencyConversion] = []
-                conversionArray.append(conversion)
-                //UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(conversionArray), forKey: "conversionArray")
-            }
+            var conversions = readSavedConversions()
+            conversions.append(conversion)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(conversions), forKey: "conversions")
             feedbackLabel.text = "Successfully Saved!"
             feedbackLabel.textColor = UIColor.black
+        }
+    }
+    
+    func saveConversions(conversion: [CurrencyConversion]) {
+        
+    }
+    
+    func readSavedConversions() -> [CurrencyConversion] {
+        if let savedConversionData = UserDefaults.standard.value(forKey:"conversions") as? Data {
+            if let array = try? PropertyListDecoder().decode(Array<CurrencyConversion>.self, from: savedConversionData) {
+                return array
+            } else {
+                return []
+            }
+        } else {
+            return []
         }
     }
     
