@@ -59,6 +59,7 @@ extension SavedSwapsViewController:UITableViewDelegate {
         VC.from = conversions[indexPath.row].query.from
         VC.to = conversions[indexPath.row].query.to
         self.navigationController?.pushViewController(VC, animated: true);
+        VC.navigationItem.setHidesBackButton(true, animated: true);
     }
 }
 
