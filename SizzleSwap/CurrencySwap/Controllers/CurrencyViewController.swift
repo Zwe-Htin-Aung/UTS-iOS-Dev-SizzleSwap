@@ -29,8 +29,7 @@ class CurrencyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         toAmountLabel.isUserInteractionEnabled = false
-        saveSwapButton.isUserInteractionEnabled = false
-        saveSwapButton.backgroundColor = .systemGray
+        saveSwapButton.isEnabled = false
         let codes = getCodes(currencyData: CurrencyCodeRequest().fetch())
         setUpDropDownFrom(dataSource: codes)
         setUpDropDownTo(dataSource: codes)
@@ -77,10 +76,9 @@ class CurrencyViewController: UIViewController {
             toAmountLabel.text = String(conversion.result)
         }
         if conversion.success {
-            saveSwapButton.isUserInteractionEnabled = true
-            saveSwapButton.backgroundColor = .systemRed
             feedbackLabel.text = "Successful Swap!"
             feedbackLabel.textColor = UIColor.black
+            saveSwapButton.isEnabled = true
         }
     }
     

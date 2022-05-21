@@ -262,10 +262,12 @@
                                             <constraint firstAttribute="height" constant="40" id="0dH-Jl-hQs"/>
                                             <constraint firstAttribute="width" constant="150" id="8ej-FR-7Uj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save Swap"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save Swap">
-                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
