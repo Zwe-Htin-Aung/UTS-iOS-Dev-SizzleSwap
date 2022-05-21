@@ -54,7 +54,13 @@ extension SavedSwapsViewController:UITableViewDelegate {
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let VC = storyboard?.instantiateViewController(withIdentifier: "CurrencyViewController") as! CurrencyViewController;
+        VC.from = conversions[indexPath.row].query.from
+        VC.to = conversions[indexPath.row].query.to
+        self.navigationController?.pushViewController(VC, animated: true);
+        VC.navigationItem.setHidesBackButton(true, animated: true);
+    }
 }
 
 extension SavedSwapsViewController:UITableViewDataSource {

@@ -22,15 +22,22 @@ class CurrencyViewController: UIViewController {
     var dropDownFrom = DropDown()
     var dropDownTo = DropDown()
     var conversion : CurrencyConversion = CurrencyConversionRequest().emptyConversion;
+    var from : String = ""
+    var to : String = ""
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         toAmountLabel.isUserInteractionEnabled = false
         saveSwapButton.isUserInteractionEnabled = false
+        saveSwapButton.backgroundColor = .systemGray
         let codes = getCodes(currencyData: CurrencyCodeRequest().fetch())
         setUpDropDownFrom(dataSource: codes)
         setUpDropDownTo(dataSource: codes)
+        if from != "" && to != "" {
+            dropDownLabelFrom.text = from
+            dropDownLabelTo.text = to
+        }
     }
     
     func setUpDropDownFrom(dataSource : [String]) {
@@ -71,6 +78,7 @@ class CurrencyViewController: UIViewController {
         }
         if conversion.success {
             saveSwapButton.isUserInteractionEnabled = true
+            saveSwapButton.backgroundColor = .systemRed
             feedbackLabel.text = "Successful Swap!"
             feedbackLabel.textColor = UIColor.black
         }

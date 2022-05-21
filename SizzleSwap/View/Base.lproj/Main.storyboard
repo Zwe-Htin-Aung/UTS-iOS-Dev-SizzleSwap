@@ -38,7 +38,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SizzleSwap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-1r-ECC">
                                         <rect key="frame" x="54.5" y="20" width="191.5" height="37"/>
                                         <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="37"/>
-                                        <color key="textColor" red="0.82745099070000006" green="0.38431376220000002" blue="0.42745098469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioR-wx-2Xw">
@@ -49,7 +49,9 @@
                                         </constraints>
                                         <color key="tintColor" red="0.8302162247474747" green="0.31673338166050691" blue="0.38753919862720915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Swap Currency"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Currency">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="U9O-gV-1DQ" kind="show" identifier="currencySwap" id="b5y-3a-YH9"/>
                                         </connections>
@@ -62,7 +64,9 @@
                                         </constraints>
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Swap Cryptocurrency"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Swap Cryptocurrency">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="0eD-QZ-SFS" kind="show" identifier="cryptoSwap" id="4yb-uQ-aN2"/>
                                         </connections>
@@ -75,7 +79,9 @@
                                         </constraints>
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Saved Swaps"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Saved Swaps">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="ZhN-En-rxs" kind="show" identifier="savedSwaps" id="gEV-7h-UZz"/>
                                         </connections>
@@ -244,7 +250,7 @@
                                         <color key="tintColor" red="0.83021622470000001" green="0.31673338169999998" blue="0.38753919860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Convert">
-                                            <color key="baseBackgroundColor" red="0.82745099070000006" green="0.31764706970000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="convertPressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="iRW-xg-64H"/>
@@ -260,6 +266,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save Swap">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="savePressed:" destination="U9O-gV-1DQ" eventType="touchUpInside" id="DXD-GO-1VJ"/>
@@ -369,7 +376,7 @@
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="i5q-Jx-2uc" detailTextLabel="DLz-74-k5a" style="IBUITableViewCellStyleValue1" id="Nf0-QT-VWs">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="i5q-Jx-2uc" detailTextLabel="DLz-74-k5a" style="IBUITableViewCellStyleValue1" id="Nf0-QT-VWs">
                                                 <rect key="frame" x="0.0" y="44.5" width="300" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nf0-QT-VWs" id="CgG-I4-bkj">
@@ -441,6 +448,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
