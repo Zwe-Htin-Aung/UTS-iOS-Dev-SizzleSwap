@@ -357,6 +357,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Crypto Swap" id="9tX-k6-HCy"/>
+                    <connections>
+                        <outlet property="cryptoViewContainer" destination="i5P-eM-ctT" id="gXf-fI-Kjn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-NV-nrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
