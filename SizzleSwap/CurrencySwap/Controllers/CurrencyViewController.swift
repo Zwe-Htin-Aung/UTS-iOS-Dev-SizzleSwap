@@ -22,15 +22,22 @@ class CurrencyViewController: UIViewController {
     var dropDownFrom = DropDown()
     var dropDownTo = DropDown()
     var conversion : CurrencyConversion = CurrencyConversionRequest().emptyConversion;
+    var from : String = ""
+    var to : String = ""
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         toAmountLabel.isUserInteractionEnabled = false
         saveSwapButton.isUserInteractionEnabled = false
+        saveSwapButton.backgroundColor = .systemGray
         let codes = getCodes(currencyData: CurrencyCodeRequest().fetch())
         setUpDropDownFrom(dataSource: codes)
         setUpDropDownTo(dataSource: codes)
+        if from != "" && to != "" {
+            dropDownLabelFrom.text = from
+            dropDownLabelTo.text = to
+        }
     }
     
     func setUpDropDownFrom(dataSource : [String]) {
@@ -70,24 +77,37 @@ class CurrencyViewController: UIViewController {
             toAmountLabel.text = String(conversion.result)
         }
         if conversion.success {
+            saveSwapButton.isUserInteractionEnabled = true
+            saveSwapButton.backgroundColor = .systemRed
             feedbackLabel.text = "Successful Swap!"
-            feedbackLabel.textColor = UIColor.green
+            feedbackLabel.textColor = UIColor.black
         }
     }
-
-    //let conversionArray = [CurrencyConversion]()
     
     @IBAction func savePressed(_ sender: UIButton) {
         
         if conversion.success {
-            if var conversionArray: [CurrencyConversion] = (UserDefaults.standard.object(forKey: "conversionArray") as? [CurrencyConversion]) {
-                conversionArray.append(conversion)
+            var conversions = readSavedConversions()
+            conversions.append(conversion)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(conversions), forKey: "conversions")
+            feedbackLabel.text = "Successfully Saved!"
+            feedbackLabel.textColor = UIColor.black
+        }
+    }
+    
+    func saveConversions(conversion: [CurrencyConversion]) {
+        
+    }
+    
+    func readSavedConversions() -> [CurrencyConversion] {
+        if let savedConversionData = UserDefaults.standard.value(forKey:"conversions") as? Data {
+            if let array = try? PropertyListDecoder().decode(Array<CurrencyConversion>.self, from: savedConversionData) {
+                return array
+            } else {
+                return []
             }
-            else {
-                var conversionArray : [CurrencyConversion] = []
-                conversionArray.append(conversion)
-                UserDefaults.standard.set(conversionArray, forKey: "conversionArray")
-            }
+        } else {
+            return []
         }
     }
     
