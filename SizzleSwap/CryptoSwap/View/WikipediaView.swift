@@ -15,6 +15,7 @@ struct WikipediaView: View {
     @State var title = ""
     @State var extract = ""
     @State var coinName = ""
+    var wikipediaSearchName = ""
     
     let searchTerms = [
         "Bitcoin": "Bitcoin",
@@ -32,10 +33,11 @@ struct WikipediaView: View {
         print("here in inittt!!!")
         if currentCoinName != "" {
             print("working??? \(searchTerms[currentCoinName]!)")
-            self.coinName = searchTerms[currentCoinName]!
+            self.wikipediaSearchName = searchTerms[currentCoinName]!
         } else {
-            self.coinName = "Bitcoin"
+            self.wikipediaSearchName = "Bitcoin"
         }
+        print("self.coin name is \(self.wikipediaSearchName)")
     }
     
     var body: some View {
@@ -63,7 +65,8 @@ struct WikipediaView: View {
             }
         }
         .onAppear {
-            WikipediaApiCall().getWikiSummary(coinName: self.coinName) { (title, extract) in
+            print("when does this occur?")
+            WikipediaApiCall().getWikiSummary(wikipediaSearchName: self.wikipediaSearchName) { (title, extract) in
                 self.title = title
                 self.extract = extract
             }
@@ -114,17 +117,37 @@ struct WikipediaPage: Codable {
 
 //viewmodel
 class WikipediaApiCall {
-    func getWikiSummary(coinName: String, completion:@escaping (_ title: String, _ extract: String) -> ()) {
-        print("sending coinName to the URL \(coinName)")
+    func getWikiSummary(wikipediaSearchName: String, completion:@escaping (_ title: String, _ extract: String) -> ()) {
+        print("sending coinName to the URL \(wikipediaSearchName)")
         
-        var components = URLComponents(string: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&")!
-        components.queryItems = [URLQueryItem(name: "titles", value: coinName)]
+        var components = URLComponents(string: "https://en.wikipedia.org/w/api.php")!
+        
+        let queryItems = [
+            URLQueryItem(name: "format", value: "json"),
+            URLQueryItem(name: "action", value: "query"),
+            URLQueryItem(name: "prop", value: "extracts"),
+            URLQueryItem(name: "exintro", value: "explaintext"),
+            URLQueryItem(name: "redirects", value: "1"),
+            URLQueryItem(name: "titles", value: wikipediaSearchName)
+        ]
+        
+        components.queryItems = queryItems
         
         print("url together \(components.url!)")
         
-        URLSession.shared.dataTask(with: components.url!) { (data, _, _) in
+        let url: URL
+        url = components.url!
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            let result = try? JSONDecoder().decode(WikipediaResponse.self, from: data!)
+            guard let data = data, error == nil else {
+                print("line 144")
+                return
+            }
+        
+            
+            let result = try? JSONDecoder().decode(WikipediaResponse.self, from: data)
+            
             
             if let result = result {
                 
@@ -137,18 +160,18 @@ class WikipediaApiCall {
                 //parse object to get extract, then set to state var
                 var pageObj: WikipediaPage
                 pageObj = pages[pageKeyString]!
-                
+                print("printing extract\(pageObj.extract)")
                 
                 //set statevar
                 let pageExtract = pageObj.extract
                 let pageTitle = pageObj.title
                 print("page extract: \(pageExtract)")
                 
-                
-                
                 DispatchQueue.main.async {
                     completion(pageTitle, pageExtract)
                 }
+            } else {
+                print("error here1")
             }
         }
         .resume()
