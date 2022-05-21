@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Glp-Vq-ef4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20019"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -377,24 +377,24 @@
                                         <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="i5q-Jx-2uc" detailTextLabel="DLz-74-k5a" style="IBUITableViewCellStyleValue1" id="Nf0-QT-VWs">
-                                                <rect key="frame" x="0.0" y="44.5" width="300" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="300" height="47.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nf0-QT-VWs" id="CgG-I4-bkj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="47.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i5q-Jx-2uc">
-                                                            <rect key="frame" x="16" y="15" width="25" height="14.5"/>
+                                                            <rect key="frame" x="16" y="12" width="38" height="24"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" red="0.95546851980000003" green="0.79918264829999996" blue="0.2797203861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <color key="highlightedColor" red="0.95546851980000003" green="0.79918264829999996" blue="0.2797203861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </label>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DLz-74-k5a">
-                                                            <rect key="frame" x="251" y="15" width="33" height="14.5"/>
+                                                            <rect key="frame" x="233.5" y="12" width="50.5" height="24"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
