@@ -58,6 +58,8 @@ extension SavedSwapsViewController:UITableViewDelegate {
         let VC = storyboard?.instantiateViewController(withIdentifier: "CurrencyViewController") as! CurrencyViewController;
         VC.from = conversions[indexPath.row].query.from
         VC.to = conversions[indexPath.row].query.to
+        VC.favouritesButton.isEnabled = false
+        VC.favouritesButton.customView?.isHidden = true
         self.navigationController?.pushViewController(VC, animated: true);
     }
 }

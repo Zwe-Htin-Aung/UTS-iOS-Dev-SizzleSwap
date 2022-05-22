@@ -19,6 +19,7 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var dropDownLabelTo: UILabel!
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var saveSwapButton: UIButton!
+    @IBOutlet weak var favouritesButton: UIBarButtonItem!
     var dropDownFrom = DropDown()
     var dropDownTo = DropDown()
     var conversion : CurrencyConversion = CurrencyConversionRequest().emptyConversion;
@@ -86,15 +87,28 @@ class CurrencyViewController: UIViewController {
         
         if conversion.success {
             var conversions = readSavedConversions()
-            conversions.append(conversion)
-            UserDefaults.standard.set(try? PropertyListEncoder().encode(conversions), forKey: "conversions")
-            feedbackLabel.text = "Successfully Saved!"
-            feedbackLabel.textColor = UIColor.black
+            if checkConversionExist() {
+                feedbackLabel.text = "Conversion Already Saved!"
+                feedbackLabel.textColor = UIColor.black
+            } else {
+                conversions.append(conversion)
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(conversions), forKey: "conversions")
+                feedbackLabel.text = "Successfully Saved!"
+                feedbackLabel.textColor = UIColor.black
+            }
         }
     }
     
-    func saveConversions(conversion: [CurrencyConversion]) {
-        
+    func checkConversionExist() -> Bool {
+        let conversions = readSavedConversions()
+        for i in 0..<conversions.count {
+            let sameOriginalCurrency = (conversions[i].query.from == conversion.query.from)
+            let sameConvertedCurrency = (conversions[i].query.to == conversion.query.to)
+            if sameOriginalCurrency && sameConvertedCurrency {
+                return true
+            }
+        }
+        return false
     }
     
     func readSavedConversions() -> [CurrencyConversion] {
