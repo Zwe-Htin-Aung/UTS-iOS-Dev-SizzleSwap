@@ -21,12 +21,13 @@ struct WikipediaView: View {
         "Bitcoin": "Bitcoin",
         "Ethereum": "Ethereum",
         "Tether": "Tether (cryptocurrency)",
-        "USD Coin": "USD Coin",
+        "USD Coin": "USD_Coin",
         "BNB": "Binance",
         "XRP": "Ripple (payment protocol)",
         "Binance USD": "Binance",
         "Cardano": "Cardano (blockchain platform)",
-        "Solana": "Solana (blockchain platform)"
+        "Solana": "Solana (blockchain platform)",
+        "Doge": ""
     ]
     
     init(currentCoinName: String){
