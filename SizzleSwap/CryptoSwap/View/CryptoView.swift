@@ -33,7 +33,7 @@ struct CryptoView: View {
                             Text(coin.name)
                                 .font(.headline)
                             
-                            Text("\(String(currentValue))")
+                            Text("AUD \(String(currentValue))")
                                 .multilineTextAlignment(.trailing)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                             

@@ -18,16 +18,16 @@ struct WikipediaView: View {
     var wikipediaSearchName = ""
     
     let searchTerms = [
-        "Bitcoin": "Bitcoin",
-        "Ethereum": "Ethereum",
-        "Tether": "Tether (cryptocurrency)",
+        "Bitcoin": "bitcoin",
+        "Ethereum": "ethereum",
+        "Tether": "tether (cryptocurrency)",
         "USD Coin": "USD_Coin",
-        "BNB": "Binance",
-        "XRP": "Ripple (payment protocol)",
-        "Binance USD": "Binance",
-        "Cardano": "Cardano (blockchain platform)",
-        "Solana": "Solana (blockchain platform)",
-        "Doge": ""
+        "BNB": "binance",
+        "XRP": "ripple (payment protocol)",
+        "Binance USD": "binance",
+        "Cardano": "cardano (blockchain platform)",
+        "Solana": "solana (blockchain platform)",
+        "Dogecoin": "dogecoin"
     ]
     
     init(currentCoinName: String){
@@ -125,8 +125,7 @@ class WikipediaApiCall {
         }
         
         
-        let lowerwikipediaSearchName = wikipediaSearchName.lowercased()
-        let escapedString = lowerwikipediaSearchName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let escapedString = wikipediaSearchName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         print(escapedString!)
         
         let baseUrl = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles="
@@ -139,7 +138,7 @@ class WikipediaApiCall {
         print("urlDynamic \(url)")
         print("urlHardcoded\(urlHardcoded)")
         
-        print("sending coinName to the URL \(lowerwikipediaSearchName)")
+//        print("sending coinName to the URL \(lowerwikipediaSearchName)")
         
 //        var components = URLComponents(string: "https://en.wikipedia.org/w/api.php")!
 //
