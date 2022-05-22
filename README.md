@@ -43,7 +43,7 @@ In order to download and run this application, follow below instructions:
 1) Clone the repo into your local folder (Or clone directly to XCode if Connected to GitHub)
 2) Unzip the folder if it was downloaded as a zip (**Skip this step if cloned directly to XCode)
 3) Open SizzleSwap.xcworkspace
-   \__  Opening in SizzleSwap.xcodeproj will cause buildtime error as SizzleSwap relies on Cocoapods Library Extensions to wrap some UI containers
+       Opening in SizzleSwap.xcodeproj will cause buildtime error as SizzleSwap relies on Cocoapods Library Extensions to wrap some UI containers
 4) Build and run program
 5) Enjoy! 
 ______________________________________________________________________________________________________________
