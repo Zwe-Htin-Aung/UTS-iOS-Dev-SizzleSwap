@@ -9,7 +9,7 @@ import Foundation
 
 struct CurrencyCodeRequest {
     
-    let apiKey = "XF7tAgubdBbD5VQr0BBCYjfUiJhXyDyV"
+    let apiKey = "F0XM6ZqMciB1uWrxyqWu8I11zrqRmRpq"
     let currencyCodeURL =  "https://api.apilayer.com/exchangerates_data/symbols"
     let emptyCurrencyCodes = CurrencyCodes(success: false, symbols: [:])
     
