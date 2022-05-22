@@ -225,7 +225,6 @@
 			children = (
 				8E68172228394AED00988040 /* View */,
 				8EBF217028311BD500E38678 /* Model */,
-				8EBF21772831201F00E38678 /* ViewModel */,
 				8EBF217228311BEA00E38678 /* Controller */,
 				8EBF217F28312D2600E38678 /* MyPlayground.playground */,
 			);
@@ -246,13 +245,6 @@
 				8EBF217328311C1A00E38678 /* CryptoViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8EBF21772831201F00E38678 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8EBF217C2831212000E38678 /* SavedSwaps */ = {

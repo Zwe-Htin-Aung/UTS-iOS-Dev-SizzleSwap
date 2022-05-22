@@ -118,62 +118,117 @@ struct WikipediaPage: Codable {
 //viewmodel
 class WikipediaApiCall {
     func getWikiSummary(wikipediaSearchName: String, completion:@escaping (_ title: String, _ extract: String) -> ()) {
-        print("sending coinName to the URL \(wikipediaSearchName)")
         
-        var components = URLComponents(string: "https://en.wikipedia.org/w/api.php")!
+        guard let urlHardcoded = URL(string: "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=ethereum") else {
+            fatalError("Invalid URL")
+        }
         
-        let queryItems = [
-            URLQueryItem(name: "format", value: "json"),
-            URLQueryItem(name: "action", value: "query"),
-            URLQueryItem(name: "prop", value: "extracts"),
-            URLQueryItem(name: "exintro", value: "explaintext"),
-            URLQueryItem(name: "redirects", value: "1"),
-            URLQueryItem(name: "titles", value: wikipediaSearchName)
-        ]
         
-        components.queryItems = queryItems
+        let lowerwikipediaSearchName = wikipediaSearchName.lowercased()
+        let escapedString = lowerwikipediaSearchName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        print(escapedString!)
         
-        print("url together \(components.url!)")
+        let baseUrl = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles="
+        let urlDynamic = baseUrl+escapedString!
+
+        guard let url = URL(string: urlDynamic) else {
+            fatalError("Invalid URL")
+        }
         
-        let url: URL
-        url = components.url!
+        print("urlDynamic \(url)")
+        print("urlHardcoded\(urlHardcoded)")
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        print("sending coinName to the URL \(lowerwikipediaSearchName)")
+        
+//        var components = URLComponents(string: "https://en.wikipedia.org/w/api.php")!
+//
+//        let queryItems = [
+//            URLQueryItem(name: "format", value: "json"),
+//            URLQueryItem(name: "action", value: "query"),
+//            URLQueryItem(name: "prop", value: "extracts"),
+//            URLQueryItem(name: "exintro", value: ""),
+//            URLQueryItem(name: "explaintext", value: ""),
+//            URLQueryItem(name: "redirects", value: "1"),
+//            URLQueryItem(name: "titles", value: wikipediaSearchName)
+//        ]
+//
+//        components.queryItems = queryItems
+//
+//        print("url together \(components.url!)")
+//        guard let url = URL(string: components.url!.absoluteString) else {
+//            print("invalid url")
+//            return
+//        }
+//
+//        print(components.url)
+        
+        URLSession.shared.dataTask(with: url) {
+            data, response, error in
             
             guard let data = data, error == nil else {
-                print("line 144")
                 return
             }
-        
+            
+            print("here or there")
             
             let result = try? JSONDecoder().decode(WikipediaResponse.self, from: data)
-            
-            
             if let result = result {
-                
-                //                get the page id
+                //get the page id
                 let pages = result.query.pages
-                
+
                 let pageKey = pages.compactMap {$0.key}
                 let pageKeyString = String(pageKey[0])
-                
+
                 //parse object to get extract, then set to state var
                 var pageObj: WikipediaPage
                 pageObj = pages[pageKeyString]!
-                print("printing extract\(pageObj.extract)")
-                
+
+
                 //set statevar
                 let pageExtract = pageObj.extract
                 let pageTitle = pageObj.title
                 print("page extract: \(pageExtract)")
-                
+
                 DispatchQueue.main.async {
                     completion(pageTitle, pageExtract)
                 }
-            } else {
-                print("error here1")
+                
             }
-        }
-        .resume()
+            
+        }.resume()
     }
 }
+    //}
+    //
+    //        URLSession.shared.dataTask(with: url) { (data, _, _) in
+    //
+    //            let result = try? JSONDecoder().decode(WikipediaResponse.self, from: data!)
+    //
+    //            print("printing result \(result)")
+    //
+    //            if let result = result {
+    //
+    ////                get the page id
+    //                let pages = result.query.pages
+    //
+    //                let pageKey = pages.compactMap {$0.key}
+    //                let pageKeyString = String(pageKey[0])
+    //
+    //                //parse object to get extract, then set to state var
+    //                var pageObj: WikipediaPage
+    //                pageObj = pages[pageKeyString]!
+    //
+    //
+    //                //set statevar
+    //                let pageExtract = pageObj.extract
+    //                let pageTitle = pageObj.title
+    //                print("page extract: \(pageExtract)")
+    //
+    //                DispatchQueue.main.async {
+    //                    completion(pageTitle, pageExtract)
+    //                }
+    //            }
+    //        }
+    //        .resume()
+    //    }
+    //}
